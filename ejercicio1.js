@@ -1,4 +1,4 @@
-unction deepEqual(a, b) {
+function deepEqual(a, b) {
     if (a === b) {
         return true;
     }
@@ -10,7 +10,6 @@ unction deepEqual(a, b) {
         }
         return true;
     }
-
     return false;
 }
 
@@ -18,7 +17,6 @@ var john = {
     firstName: 'John',
     lastName: 'Doe'
 }
-
 
 console.log('E1 Test 1:', deepEqual(1, 1)) // true
 console.log('E1 Test 2:', deepEqual(1, '1')) // false
