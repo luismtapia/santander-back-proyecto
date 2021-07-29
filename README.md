@@ -37,7 +37,7 @@ console.log('E1 Test 5:', deepEqual(john, { firstName: 'John' })) // false
 
 
     - chunk()
-    - frequency()
+
 
 - [ ] Postwork 8
     - [ ] Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
