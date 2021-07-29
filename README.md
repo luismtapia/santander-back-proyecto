@@ -32,7 +32,7 @@ console.log('E1 Test 2:', deepEqual(1, '1')) // false
 console.log('E1 Test 3:', deepEqual(john, john)) // true
 console.log('E1 Test 4:', deepEqual(john, { firstName: 'John', lastName: 'Doe' })) // true
 console.log('E1 Test 5:', deepEqual(john, { firstName: 'John' })) // false
-
+```
 
 
 
