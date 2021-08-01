@@ -1,0 +1,23 @@
+{
+  "name": "santander-back-proyecto",
+  "version": "1.0.0",
+  "description": "Agregando sass al proyecto con script para ejecutar sass",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node .\\node_modules\\sass\\sass.js --watch .\\sass.scss estilo.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/14030598/santander-back-proyecto.git"
+  },
+  "author": "Luis Manuel Tapia Bautista",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/14030598/santander-back-proyecto/issues"
+  },
+  "homepage": "https://github.com/14030598/santander-back-proyecto#readme",
+  "dependencies": {
+    "sass": "^1.37.0"
+  }
+}
