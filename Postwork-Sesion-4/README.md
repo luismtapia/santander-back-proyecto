@@ -91,8 +91,8 @@ variantes:
 
 chunk
 ```
-Xn = A[Sn ... Sn+size]
-Sn=S+size
+// Xn = A[Sn ... Sn+size]
+// Sn=S+size
 function chunk(array, size) {
     let X=[];
     let S = size;
