@@ -70,23 +70,23 @@ En focus buscar:
 
 
 <!-- ![Inicio](movil-inicio.png) -->
-<img src="movil-inicio.png" alt="inicio" heigth="100px" width="100px">
+<img src="movil-inicio.png" alt="inicio" heigth="200px" width="200px">
 Al cargar muestra todas las recetas
 
 --- 
 
 <!-- ![Buscar](movil-buscar.png) -->
-<img src="movil-buscar.png" alt="inicio" heigth="100px" width="100px">
-]Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
+<img src="movil-buscar.png" alt="inicio" heigth="200px" width="200px">
+Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
 
 ---
 
 <!-- ![Menú](movil-menu.png) -->
-<img src="movil-menu.png" alt="inicio" heigth="100px" width="100px">
+<img src="movil-menu.png" alt="inicio" heigth="200px" width="200px">
 Cuando se da click en menu hamburguesa, desplega las opciones; la animación del menú cambia a icono x
 
 ---
 
 <!-- ![Aleatoria](movil-aleatoria.png) -->
-<img src="movil-aleatoria.png" alt="inicio" heigth="100px" width="100px">
+<img src="movil-aleatoria.png" alt="inicio" heigth="200px" width="200px">
 Boton abajo genera nueva receta aleatoria
