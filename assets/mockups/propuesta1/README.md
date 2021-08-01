@@ -60,8 +60,11 @@ En focus buscar:
 ![Footer](web-footer.png)
 
 
+[[movil-inicio.png | altura=10px]]
 
-<img src="movil-inicio.png" alt="inicio" style="heigth: 30px; width: 30px">
+[[movil-inicio.png | heigth=10px]]
+
+<img src="movil-inicio.png" alt="inicio" heigth="30px" width="30px">
 
 ---
 ## móvil
