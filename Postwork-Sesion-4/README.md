@@ -85,3 +85,33 @@ console.log('Test 2:', frequency('www.bedu.org')) // {.: 2, b: 1, d: 1, e: 1, g:
 console.log('Test 3:', frequency('john.doe@domain.com')) // {.: 2, @: 1, a: 1, c: 1, d: 2, e: 1, h: 1, i: 1, j: 1, m: 2, n: 2, o: 4}
 console.log('Test 4:', frequency('Programar en JavaScript es divertido'))
 ```
+
+
+variantes: 
+
+chunk
+```
+Xn = A[Sn ... Sn+size]
+Sn=S+size
+function chunk(array, size) {
+    let X=[];
+    let S = size;
+    for (let n = 0; n < array.length; n+=size) {
+        X.push(array.slice(n,S));
+        S += size;
+    }
+    return X;
+};
+```
+
+frequency
+```
+const frequency = (cadena) =>{
+    const frecuencia={};
+    const array = cadena.split("").sort();
+    array.forEach(item => {
+        frecuencia[item] = frecuencia[item] >= 1 ? frecuencia[item]+1 : 1;
+    });
+    return frecuencia;
+}
+```
