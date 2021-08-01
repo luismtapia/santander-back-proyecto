@@ -61,20 +61,27 @@ En focus buscar:
 
 
 
+<img src="movil-inicio.png" alt="inicio" style="heigth: 30px; width: 30px">
+
+---
+## móvil
 ---
 
 
-![alt](movil-inicio.png | 400px)
-
-## móvil
 ![Inicio](movil-inicio.png)
 Al cargar muestra todas las recetas
+
+--- 
 
 ![Buscar](movil-buscar.png)
 ]Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
 
+---
+
 ![Menú](movil-menu.png)
 Cuando se da click en menu hamburguesa, desplega las opciones; la animación del menú cambia a icono x
+
+---
 
 ![Aleatoria](movil-aleatoria.png)
 Boton abajo genera nueva receta aleatoria
