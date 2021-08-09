@@ -67,19 +67,19 @@ En focus buscar:
 ---
 ## móvil
 ---
-![mockup](movil-mockup.pdf)
+[mockup movil en pdf](movil-mockup.pdf)
 
 
 <!-- ![Inicio](movil-inicio.png) -->
 <img src="movil-inicio.png" alt="inicio" heigth="200px" width="200px">
-<img src="movil-buscar.png" alt="inicio" heigth="200px" width="200px">
-<img src="movil-menu.png" alt="inicio" heigth="200px" width="200px">
-<img src="movil-hover.png" alt="inicio" heigth="200px" width="200px">
-<img src="movil-detalle.png" alt="inicio" heigth="200px" width="200px">
-<img src="movil-footer.png" alt="inicio" heigth="200px" width="200px">
+<img src="movil-buscar.png" alt="buscar" heigth="200px" width="200px">
+<img src="movil-menu.png" alt="menu" heigth="200px" width="200px">
+<img src="movil-hover.png" alt="hover" heigth="200px" width="200px">
+<img src="movil-detalle.png" alt="detalle" heigth="200px" width="200px">
+<img src="movil-footer.png" alt="footer" heigth="200px" width="200px">
 
 ---
 
-Al cargar muestra todas las recetas
-Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
-Cuando se da click en menu hamburguesa, desplega las opciones; la animación del menú cambia a icono x
+* Al cargar muestra todas las recetas
+* Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
+* Cuando se da click en menu hamburguesa, desplega las opciones; la animación del menú cambia a icono x
