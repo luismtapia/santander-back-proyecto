@@ -137,22 +137,22 @@ Cards: font-size: 0.8em;
 1. Inicio
 ```
 <p align="center">
-  <img src="images/index_navegador.png" alt="Logo principal" height="300px">
+  <img src="images/index-navegador.png" alt="Inicio" height="300px">
 
 ```
 2. Mostrar recetas
 ```
 <p align="center">
-  <img src="images/recipes_list-browser.png" alt="Logo principal" height="300px">
+  <img src="images/recipes_list-browser.png" alt="Todas las recetas" height="300px">
 
 <p align="center">
-  <img src="images/recipes_list-ingredients-browser.png" alt="Logo principal" height="300px">
+  <img src="images/recipes_list-ingredients-browser.png" alt="Mirando los ingredients" height="300px">
 
 <p align="center">
-  <img src="images/recipes_list-ingredients-declarations.png" alt="Logo principal" height="300px">
+  <img src="images/recipes_list-ingredients-declarations.png" alt="Mirando las instrucciones" height="300px">
 
 <p align="center">
-  <img src="images/recipes_list-ingredients-watching-video.png" alt="Logo principal" height="300px">
+  <img src="images/recipes_list-ingredients-watching-video.png" alt="Mirando el video" height="300px">
 
 ```
 3. Mostrar detalle de receta
