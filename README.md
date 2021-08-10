@@ -34,9 +34,14 @@ _Esta es la primera parte de ese proyecto y consiste en dejar listo el ambiente 
 - [X] Instalar las librerías que se vayan a utilizar (Bootstrap, Materialize, Foundation, etc.).
 - [X] Configurar los loaders necesarios para los estilos, se puede utilizar CSS o SASS.
 
-
+## Postwork 12
 - [ ] **Postwork 12**
 
-[Documentación](wiki)
+## Wiki
+[About](https://github.com/14030598/santander-back-proyecto/wiki)
+
+[Documentación](https://github.com/14030598/santander-back-proyecto/wiki/Documentaci%C3%B3n)
+
+[Evaluación](https://github.com/14030598/santander-back-proyecto/wiki/Rubros-a-evaluar-para-la-entrega-de-proyecto-final)
 
 
