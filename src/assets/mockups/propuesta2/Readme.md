@@ -1,4 +1,4 @@
-# Segunda Propuesta de Mockup
+# Segunda Propuesta del Mockup
 ## Buscador de recetas
 Sesión 8 - Postwork 2
 
@@ -183,7 +183,7 @@ Cards: font-size: 0.8em;
 
 <br>
 
-## Resumen del API 📄
+## Resumen del API del sitio [TheMealDB](https://www.themealdb.com/) 📄
 
 | # | Target| Link | Use |
 | --- | --- | --- | --- |
