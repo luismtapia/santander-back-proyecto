@@ -158,7 +158,9 @@ Cards: font-size: 0.8em;
 3. Mostrar detalle de receta
 ```
 <p align="center">
-  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPad Pro).png" alt="Logo principal" height="300px">
+  <img src="images/detalle-de-una-receta-navegador.png" alt="Mirando el detalle de una receta" height="300px">
+<p align="center">
+  <img src="images/detalle-de-una-receta-2-navegador.png" alt="Mirando el detalle de una receta" height="300px">
 
 
 ## Especificaciones 🚀
