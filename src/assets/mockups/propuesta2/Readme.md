@@ -85,7 +85,7 @@ Cards: font-size: 0.8em;
 2. Estadísticas de recetas
 ```
 <p align="center">
-  <img src="images/127.0.0.1_5500_fase2_propuesta2_index.html(Moto%20G4).png" alt="Logo principal" height="200px">
+  <img src="images/estadisticas.png" alt="Logo principal" height="200px">
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
