@@ -93,6 +93,16 @@ Cards: font-size: 0.8em;
 ```
 2. Mostrar recetas
 ```
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html (1).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(Galaxy S5).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPad Pro).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPhone 5_SE).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPad).png" alt="Logo principal" height="300px">
 
 ```
 3. Mostrar detalle de receta
