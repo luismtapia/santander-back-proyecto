@@ -182,7 +182,9 @@ Cards: font-size: 0.8em;
 * [Fonts] https://semantic-ui.com/
 
 <br>
+
 ## Resumen del API 📄
+
 | # | Target| Link | Use |
 | --- | --- | --- | --- |
 | 1 | Search meal by name|www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata | Search only meal name |
