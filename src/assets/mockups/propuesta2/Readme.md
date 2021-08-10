@@ -70,10 +70,18 @@ Cards: font-size: 0.8em;
 ```
 1. Inicio
 ```
+<p align="center">
+  <img src="images/busc_receta_V2.png" alt="Logo principal">
+&nbsp; &nbsp; &nbsp; &nbsp;
+</p>
 
 ```
 2. Estadísticas de recetas
 ```
+<p align="center">
+  <img src="images/images/127.0.0.1_5500_fase2_propuesta2_index.html(Moto%20G4).png" alt="Logo principal" height="100">
+&nbsp; &nbsp; &nbsp; &nbsp;
+</p>
 
 
 ```
