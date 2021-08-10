@@ -1,4 +1,4 @@
-# Propuesta de Mockups
+# Segunda Propuesta de Mockup
 ## Buscador de recetas
 Sesión 8 - Postwork 2
 
@@ -132,7 +132,7 @@ Cards: font-size: 0.8em;
 <p align="center">
   <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPad) (1).png" alt="Logo principal" height="300px">
 
-## Estructura en Navegador ⚙️
+## Estructura en Navegador 🚀
 ```
 1. Inicio
 ```
@@ -169,12 +169,6 @@ Cards: font-size: 0.8em;
 
 ```
 ```
-
-
-* [Ejercicio 2](https://github.com/14030598/santander-back-proyecto/blob/master/ejemplos-sesion04-postwork2.js)
-```
-- Escribir una función chunk que recibe un arreglo y un número entero size. 
-- La función debe dividir el arreglo en múltiples arreglos del tamaño determinado por size.
 ```
 
 
