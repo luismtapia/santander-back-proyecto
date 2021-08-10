@@ -1,4 +1,5 @@
-# Propuesta N° 1
+# Propuesta N° 1         &npsp;&npsp;&npsp;&npsp;&npsp;* [Propuesta N° 2](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2)
+
 
 ## Paleta de colores
 | Color | Descripción |
