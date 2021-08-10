@@ -31,12 +31,24 @@
 ![Movil mockup](propuesta1/movil-mockup.png)
 
 <!-- ![Inicio](propuesta1/movil-inicio.png) -->
-<img src="propuesta1/movil-inicio.png" alt="inicio" heigth="200px" width="200px">
-<img src="propuesta1/movil-buscar.png" alt="buscar" heigth="200px" width="200px">
-<img src="propuesta1/movil-menu.png" alt="menu" heigth="200px" width="200px">
-<img src="propuesta1/movil-hover.png" alt="hover" heigth="200px" width="200px">
-<img src="propuesta1/movil-detalle.png" alt="detalle" heigth="200px" width="200px">
-<img src="propuesta1/movil-footer.png" alt="footer" heigth="200px" width="200px">
+<p align="center">
+  <img src="propuesta1/movil-inicio.png" alt="inicio" heigth="200px" width="200px">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="propuesta1/movil-buscar.png" alt="buscar" heigth="200px" width="200px">
+ &nbsp; &nbsp; &nbsp; &nbsp;
+ <img src="propuesta1/movil-menu.png" alt="menu" heigth="200px" width="200px">
+</p>
+
+<p align="center">
+  <img src="propuesta1/movil-hover.png" alt="hover" heigth="200px" width="200px">
+&nbsp; &nbsp; &nbsp; &nbsp;
+  <img src="propuesta1/movil-detalle.png" alt="detalle" heigth="200px" width="200px">
+ &nbsp; &nbsp; &nbsp; &nbsp;
+ <img src="propuesta1/movil-footer.png" alt="footer" heigth="200px" width="200px">
+</p>
+
+ 
+ 
 
 ---
 
