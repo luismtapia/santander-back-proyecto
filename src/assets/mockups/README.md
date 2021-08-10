@@ -103,6 +103,32 @@ Nota: agregar los elementos que se necesiten
 .
 .
 Aqui la tabla
+<br>
+
+## Resumen del API del sitio [TheMealDB](https://www.themealdb.com/) 📄
+
+| # | Target| Link | Use |
+| --- | --- | --- | --- |
+| 1 | Search meal by name|www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata | Search only meal name |
+|2|Get the 25 first meals|www.themealdb.com/api/json/v1/1/search.php?s|Get first 25 recipes|
+|3|List all meals by first letter|www.themealdb.com/api/json/v1/1/search.php?f=a|Get all the recipes whose food name begins with the search letter|
+|4|Lookup full meal details by id|www.themealdb.com/api/json/v1/1/lookup.php?i=52772|Get recipe by id|
+|5|Lookup a single random meal|www.themealdb.com/api/json/v1/1/random.php|Use general for get a single random meal|
+|6|List all meal categories|www.themealdb.com/api/json/v1/1/categories.php|Use general for get categories with details|
+|7|Latest Meals (only available to $2+ Patreon supporters)|www.themealdb.com/api/json/v1/1/latest.php|
+|8|List all Categories|www.themealdb.com/api/json/v1/1/list.php?c=list|Get only name of category|
+|9|List all Area|www.themealdb.com/api/json/v1/1/list.php?a=list|Use general for get areas|
+|10|List all Ingredients|www.themealdb.com/api/json/v1/1/list.php?i=list|Use for get about 573 ingredients|
+|11|Filter by main ingredient|www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast|Use for get recipes by only one ingredient|
+|12|Filter by Category|www.themealdb.com/api/json/v1/1/filter.php?c=Seafood|Use for get recipes by Category|
+|13|Filter by Area|www.themealdb.com/api/json/v1/1/filter.php?a=Canadian|Use for get recipes by Area
+|14|Meal Thumbnail Images|www.themealdb.com/images/media/meals/llcbn01574260722.jpg/preview|Add "/preview" to the end of the meal image URL (strMealThumb node).|
+|15|Ingredient Thumbnail Images| (www.themealdb.com/images/ingredients/Lime.png/)<br>(www.themealdb.com/images/ingredients/Lime-Small.png) |Mode of obtaining the images of the ingredients|
+
+<br>
 
 
 # Ir a [Propuesta N° 2](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2) 🚀
+
+# Resolución de Propuestas
+- Se ha elegido la propuesta No. 1 como el mockup ganador.
