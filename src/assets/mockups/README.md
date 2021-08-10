@@ -17,9 +17,9 @@
 
 
 ## Fonts (@font-face)
-* Titulo: `Cabin Sketch`
-* Titulo: `Gagalin`
-* Menu: `Bebas Neue`
+* Título: `Cabin Sketch`
+* Título: `Gagalin`
+* Menú: `Bebas Neue`
 * Texto: `Cinzel`
 * Texto: `Cinzel Decorate`
 * Texto: `Hasmmersith One`
@@ -41,11 +41,11 @@
 ---
 
 * Al cargar muestra todas las recetas.
-* Cuando se da click en buscar, con animación se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input.
-* Cuando se da click en menú hamburguesa, despliega las opciones; la animación del menú cambia a ícono x.
+* Cuando se da click en buscar, con animación se recorre de derecha a izquierda la lupa y aparece un input, y al final el ícono x para borrar texto del input.
+* Cuando se da click en el menú hamburguesa, despliega las opciones; la animación del menú cambia al ícono x.
 
 
-## web
+## Web
 ### Inicio
 ![Inicio](propuesta1/web-inicio.png)
 Al cargar:
@@ -67,8 +67,8 @@ En hover de una tarjeta:
 
 ![Scroll](propuesta1/web-scroll2.png)
 En focus buscar:
- - Ocultar aleatoria, todas y categorias, 
- - La lupa con animación se va a la izquierda y aparece ícono cerrar(propuesta1/x)
+ - Ocultar aleatoria, todas y categorías, 
+ - La lupa con animación se va a la izquierda y aparece el ícono cerrar(propuesta1/x)
 
 ---
 
