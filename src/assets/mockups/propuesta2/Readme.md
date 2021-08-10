@@ -50,7 +50,7 @@ Cards: font-size: 0.8em;
 * [Logo](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png)
 
 <p align="center">
-  <img src="images/busc_receta_V2.png.png" alt="Logo principal">
+  <img src="images/busc_receta_V2.png" alt="Logo principal">
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
