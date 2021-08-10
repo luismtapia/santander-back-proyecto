@@ -192,8 +192,7 @@ Cards: font-size: 0.8em;
 |12|Filter by Category|www.themealdb.com/api/json/v1/1/filter.php?c=Seafood|Use for get recipes by Category|
 |13|Filter by Area|www.themealdb.com/api/json/v1/1/filter.php?a=Canadian|Use for get recipes by Area
 |14|Meal Thumbnail Images|/images/media/meals/llcbn01574260722.jpg/preview|Add "/preview" to the end of the meal image URL (strMealThumb node).|
-|15|Ingredient Thumbnail Images	|"www.themealdb.com/images/ingredients/Lime.png
-www.themealdb.com/images/ingredients/Lime-Small.png"|Mode of obtaining the images of the ingredients|
+|15|Ingredient Thumbnail Images| (www.themealdb.com/images/ingredients/Lime.png/)<br>(www.themealdb.com/images/ingredients/Lime-Small.png) |Mode of obtaining the images of the ingredients|
 
 <br><br>
 | Comando | Descripción |
