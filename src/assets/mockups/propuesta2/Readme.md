@@ -133,12 +133,15 @@ Cards: font-size: 0.8em;
   <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPad) (1).png" alt="Detalle de Receta" height="300px">
 
 ## Estructura en Navegador 🚀
+
 ```
 1. Inicio
 ```
 <p align="center">
   <img src="images/index-navegador.png" alt="Inicio" height="300px">
 </p>
+
+
 ```
 2. Mostrar recetas
 ```
@@ -154,9 +157,11 @@ Cards: font-size: 0.8em;
 <p align="center">
   <img src="images/recipes_list-ingredients-watching-video.png" alt="Mirando el video" height="300px">
 </p>
+
 ```
 3. Mostrar detalle de receta
 ```
+
 <p align="center">
   <img src="images/detalle-de-una-receta-navegador.png" alt="Mirando el detalle de una receta" height="300px">
 </p>
@@ -171,9 +176,9 @@ Cards: font-size: 0.8em;
 * [Fonts] https://semantic-ui.com/
 
 ## Resumen del API 📄
-|#|	Target|	Link|	Use|
-| --- | --- || --- | --- |
-|1|	Search meal by name|www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata|Search only meal name|
+| # | Target| Link | Use |
+| --- | --- | --- | --- |
+| 1 | Search meal by name|www.themealdb.com/api/json/v1/1/search.php?s=Arrabiata | Search only meal name |
 |2|Get the 25 first meals|www.themealdb.com/api/json/v1/1/search.php?s|Get first 25 recipes|
 |3|List all meals by first letter|www.themealdb.com/api/json/v1/1/search.php?f=a|Get all the recipes whose food name begins with the search letter|
 |4|Lookup full meal details by id|www.themealdb.com/api/json/v1/1/lookup.php?i=52772|Get recipe by id|
