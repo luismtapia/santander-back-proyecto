@@ -163,17 +163,6 @@ Cards: font-size: 0.8em;
   <img src="images/detalle-de-una-receta-2-navegador.png" alt="Mirando el detalle de una receta" height="300px">
 
 
-## Especificaciones 🚀
-
-* []()
-
-```
-```
-```
-
-
-
-
 ## Construido con 🛠️
 
 * Paint
