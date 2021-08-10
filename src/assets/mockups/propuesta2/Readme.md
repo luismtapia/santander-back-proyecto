@@ -51,13 +51,7 @@ Cards: font-size: 0.8em;
 
 * [Imagen de inicio](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/ingredientes-comida-italiana.png)
 
-<br>
-https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png
-
-
-<br>
-<img src="https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png" alt="Logo sitio de recetas"/>
-<br>
+* [Imagen de inicio](https://github.com/14030598/santander-back-proyecto/blob/desarrollo/src/assets/mockups/propuesta2/images/ingredientes-comida-italiana.jpg)
 
 
 ```
