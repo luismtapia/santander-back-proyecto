@@ -40,18 +40,18 @@
 
 ---
 
-* Al cargar muestra todas las recetas
-* Cuando se da click en buscar, con animacion se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input
-* Cuando se da click en menu hamburguesa, desplega las opciones; la animación del menú cambia a icono x
+* Al cargar muestra todas las recetas.
+* Cuando se da click en buscar, con animación se recorre de derecha a izquierda la lupa y aparece input, y al final icono x para borrar texto de input.
+* Cuando se da click en menú hamburguesa, despliega las opciones; la animación del menú cambia a ícono x.
 
 
 ## web
 ### Inicio
 ![Inicio](propuesta1/web-inicio.png)
 Al cargar:
- - genera una receta aleatoria
- - hay un boton en la tarjeta que genera una nueva receta aleatoria.
-   - y cuando se haga scroll esta el menu aleatoria que muestra una receta aleatoria en modal
+ - Genera una receta aleatoria.
+ - Hay un botón en la tarjeta que genera una nueva receta aleatoria.
+   - Cuando se haga scroll está el menú aleatorio que muestra una receta aleatoria en modal.
 
 ---
 
@@ -59,16 +59,16 @@ Al cargar:
 ### Scrolls
 ![Scroll](propuesta1/web-scroll1.png)
 En hover de una tarjeta:
- - mostrar los datos
- - ocultar la imagen
+ - Mostrar los datos.
+ - Ocultar la imagen.
 
 ---
 
 
 ![Scroll](propuesta1/web-scroll2.png)
 En focus buscar:
- - ocultar aleatoria, todas y categorias, 
- - la lupa con animacion se va a la izquierda y aparece icono cerrar(propuesta1/x)
+ - Ocultar aleatoria, todas y categorias, 
+ - La lupa con animación se va a la izquierda y aparece ícono cerrar(propuesta1/x)
 
 ---
 
