@@ -103,7 +103,7 @@ Cards: font-size: 0.8em;
 
 
 ```
-2. Mostrar recetas
+3. Mostrar recetas
 ```
 <p align="center">
   <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html (1).png" alt="Logo principal" height="300px">
@@ -117,7 +117,7 @@ Cards: font-size: 0.8em;
   <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPad).png" alt="Logo principal" height="300px">
 
 ```
-3. Mostrar detalle de receta
+4. Mostrar detalle de receta
 ```
 <p align="center">
   <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html (1).png" alt="Logo principal" height="300px">
@@ -134,7 +134,32 @@ Cards: font-size: 0.8em;
 
 ## Estructura en Navegador ⚙️
 ```
+1. Inicio
 ```
+<p align="center">
+  <img src="images/index_navegador.png" alt="Logo principal" height="300px">
+
+```
+2. Mostrar recetas
+```
+<p align="center">
+  <img src="images/recipes_list-browser.png" alt="Logo principal" height="300px">
+
+<p align="center">
+  <img src="images/recipes_list-ingredients-browser.png" alt="Logo principal" height="300px">
+
+<p align="center">
+  <img src="images/recipes_list-ingredients-declarations.png" alt="Logo principal" height="300px">
+
+<p align="center">
+  <img src="images/recipes_list-ingredients-watching-video.png" alt="Logo principal" height="300px">
+
+```
+3. Mostrar detalle de receta
+```
+<p align="center">
+  <img src="images/127.0.0.1_5500_semantic-cards_recipes-card.html(iPad Pro).png" alt="Logo principal" height="300px">
+
 
 ## Especificaciones 🚀
 
