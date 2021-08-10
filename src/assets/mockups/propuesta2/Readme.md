@@ -85,7 +85,7 @@ Cards: font-size: 0.8em;
 2. Estadísticas de recetas
 ```
 <p align="center">
-  <img src="images/estadisticas.png" alt="Logo principal" height="200px">
+  <img src="images/estadisticas.png" alt="Logo principal" >
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
@@ -107,7 +107,18 @@ Cards: font-size: 0.8em;
 ```
 3. Mostrar detalle de receta
 ```
-
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html (1).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPhone 6_7_8 Plus).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPhone 6_7_8 Plus) (2).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPhone 6_7_8 Plus) (1).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPad).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPad) (1).png" alt="Logo principal" height="300px">
 
 ## Estructura en Navegador ⚙️
 ```
