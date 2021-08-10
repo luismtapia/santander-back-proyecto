@@ -98,11 +98,6 @@ En focus buscar:
 ![Fondo 1](propuesta1/fondo1.jpg)
 ![Fondo 2](propuesta1/fondo2.jpeg)
 
-Nota: agregar los elementos que se necesiten
-.
-.
-.
-Aqui la tabla
 <br>
 
 ## Resumen del API del sitio [TheMealDB](https://www.themealdb.com/) 📄
