@@ -54,13 +54,22 @@ Cards: font-size: 0.8em;
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
+* [Menu](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/menu-buscador-de-recetas.png)
+<p align="center">
+  <img src="images/menu-buscador-de-recetas.png" alt="Logo principal">
+&nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+
 * [Imagen de inicio](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/ingredientes-comida-italiana.jpg)
 
-* [Menu](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/menu-buscador-de-recetas.png)
-
-* [Pie de página]()
 <p align="center">
   <img src="images/ingredientes-comida-italiana.jpg" alt="Logo principal">
+&nbsp; &nbsp; &nbsp; &nbsp;
+</p>
+
+* [Pie de página](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/footer.png)
+<p align="center">
+  <img src="images/footer.png" alt="Logo principal">
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
