@@ -4,7 +4,7 @@ Sesión 8 - Postwork 2
 
 _Configurar un ambiente de desarrollo para una aplicación nueva._
 
-
+<br>
 ## Especificaciones 📋
 
 *	Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
@@ -12,6 +12,8 @@ _Configurar un ambiente de desarrollo para una aplicación nueva._
 *	Mostrar los resultados usando las imágenes de las recetas.
 *	Al seleccionar una imagen se deben desplegar los detalles de la receta, es decir, los ingredientes y las instrucciones.
 *	Mostrar en la UI un botón secundario para desplegar una receta aleatoria.
+
+<br>
 
 ## Colores ❤️
 ```
@@ -37,6 +39,7 @@ Custom5         : #4a008a
 Custom6         : rga(238, 238, 238)
 
 ```
+<br>
 
 ## Fonts ⌨️
 ```
@@ -45,6 +48,7 @@ Header Item: font-size: 1.2em;
 Message: font-size: 1.3em;
 Cards: font-size: 0.8em;
 ```
+<br>
 
 ## Assets 📦
 * [Logo](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png)
@@ -132,6 +136,7 @@ Cards: font-size: 0.8em;
 <p align="center">
   <img src="images/127.0.0.1_5500_propuesta2_detalle_receta.html(iPad) (1).png" alt="Detalle de Receta" height="300px">
 
+<br>
 ## Estructura en Navegador 🚀
 
 ```
@@ -169,12 +174,14 @@ Cards: font-size: 0.8em;
   <img src="images/detalle-de-una-receta-2-navegador.png" alt="Mirando el detalle de una receta" height="300px">
 </p>
 
+<br>
 ## Construido con 🛠️
 
 * Paint
 * [Paletas] https://www.colourlovers.com/
 * [Fonts] https://semantic-ui.com/
 
+<br>
 ## Resumen del API 📄
 | # | Target| Link | Use |
 | --- | --- | --- | --- |
@@ -191,19 +198,27 @@ Cards: font-size: 0.8em;
 |11|Filter by main ingredient|www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast|Use for get recipes by only one ingredient|
 |12|Filter by Category|www.themealdb.com/api/json/v1/1/filter.php?c=Seafood|Use for get recipes by Category|
 |13|Filter by Area|www.themealdb.com/api/json/v1/1/filter.php?a=Canadian|Use for get recipes by Area
-|14|Meal Thumbnail Images|/images/media/meals/llcbn01574260722.jpg/preview|Add "/preview" to the end of the meal image URL (strMealThumb node).|
+|14|Meal Thumbnail Images|www.themealdb.com/images/media/meals/llcbn01574260722.jpg/preview|Add "/preview" to the end of the meal image URL (strMealThumb node).|
 |15|Ingredient Thumbnail Images| (www.themealdb.com/images/ingredients/Lime.png/)<br>(www.themealdb.com/images/ingredients/Lime-Small.png) |Mode of obtaining the images of the ingredients|
 
-<br><br>
-| Comando | Descripción |
-| --- | --- |
-| git status | Enumera todos los archivos nuevos o modificados |
-| git diff | Muestra las diferencias de archivo que no han sido preparadas |
+<br>
 
 ## Control de Versiones 📌
 
 Usamos git para el versionado. Para todas las versiones disponibles, revisar [este repositorio](https://github.com/14030598/santander-back-proyecto/).
 
+| Comando | Descripción |
+| --- | --- |
+| git status | Enumera todos los archivos nuevos o modificados |
+| git diff | Muestra las diferencias de archivo que no han sido preparadas |
+| git add | Añadir componente modificado|
+| git commit -m "" | Incorporar mensaje al cambio|
+| git push | Empujar los cambios a la nube|
+| git clone https://github.com/14030598/santander-back-proyecto | Clonar proyecto |
+| git checkout desarrollo | Cambiar a la rama de desarrollo|
+| git pull | Actualizar repositorio |
+
+<br>
 ## Autores ✒️
 
 Team 4:
