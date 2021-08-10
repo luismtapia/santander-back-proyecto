@@ -5,6 +5,7 @@ Sesión 8 - Postwork 2
 _Configurar un ambiente de desarrollo para una aplicación nueva._
 
 <br>
+
 ## Especificaciones 📋
 
 *	Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
@@ -175,6 +176,7 @@ Cards: font-size: 0.8em;
 </p>
 
 <br>
+
 ## Construido con 🛠️
 
 * Paint
@@ -221,6 +223,7 @@ Usamos git para el versionado. Para todas las versiones disponibles, revisar [es
 | git pull | Actualizar repositorio |
 
 <br>
+
 ## Autores ✒️
 
 Team 4:
