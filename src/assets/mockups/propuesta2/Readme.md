@@ -56,6 +56,9 @@ Cards: font-size: 0.8em;
 
 * [Imagen de inicio](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/ingredientes-comida-italiana.jpg)
 
+* [Menu](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/menu-buscador-de-recetas.png)
+
+* [Pie de página]()
 <p align="center">
   <img src="images/ingredientes-comida-italiana.jpg" alt="Logo principal">
 &nbsp; &nbsp; &nbsp; &nbsp;
