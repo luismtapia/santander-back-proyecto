@@ -71,7 +71,13 @@ Cards: font-size: 0.8em;
 1. Inicio
 ```
 <p align="center">
-  <img src="images/127.0.0.1_5500_fase2_propuesta2_index.html(Moto%20G4).png" alt="Logo principal" height="200px">
+  <img src="images/127.0.0.1_5500_fase2_propuesta2_index.html (1).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_fase2_propuesta2_index.html(Moto%20G4).png" alt="Logo principal" height="300px">
+<p align="center">
+  <img src="images/127.0.0.1_5500_fase2_propuesta2_index.html(iPad).png" alt="Logo principal" height="300px">
+
+  
 &nbsp; &nbsp; &nbsp; &nbsp;
 </p>
 
