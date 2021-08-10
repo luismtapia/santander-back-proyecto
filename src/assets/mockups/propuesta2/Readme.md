@@ -1,7 +1,3 @@
-Propuesta 2
-Propuesta 2
-Buscador de recetas
-
 # Propuesta de Mockups
 ## Buscador de recetas
 Sesión 8 - Postwork 2
@@ -11,11 +7,11 @@ _Configurar un ambiente de desarrollo para una aplicación nueva._
 
 ### Especificaciones 📋
 
-•	Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
-•	Utilizar la siguiente API para obtener los resultados: [TheMealDB](https://www.themealdb.com/)
-•	Mostrar los resultados usando las imágenes de las recetas.
-•	Al seleccionar una imagen se deben desplegar los detalles de la receta, es decir, los ingredientes y las instrucciones.
-•	Mostrar en la UI un botón secundario para desplegar una receta aleatoria.
+*	Mostrar en la UI un input para ingresar texto y un botón para generar la búsqueda.
+*	Utilizar la siguiente API para obtener los resultados: [TheMealDB](https://www.themealdb.com/)
+*	Mostrar los resultados usando las imágenes de las recetas.
+*	Al seleccionar una imagen se deben desplegar los detalles de la receta, es decir, los ingredientes y las instrucciones.
+*	Mostrar en la UI un botón secundario para desplegar una receta aleatoria.
 
 ## Colores
 ```
@@ -51,9 +47,12 @@ Cards: font-size: 0.8em;
 ```
 
 ## Assets
-```
 * [Logo](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png)
 
+<img src="https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/busc_receta_V2.png" alt="Logo sitio de recetas"/>
+
+
+```
 * [Imagen de inicio](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2/images/ingredientes-comida-italiana.png)
 ```
 
