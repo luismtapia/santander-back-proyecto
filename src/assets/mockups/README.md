@@ -125,5 +125,5 @@ En focus buscar:
 
 # Ir a [Propuesta N° 2](https://github.com/14030598/santander-back-proyecto/tree/desarrollo/src/assets/mockups/propuesta2) 🚀
 
-# Resolución de Propuestas
+# Resolución de Propuestas  ☕ 🍺
 - Se ha elegido la propuesta No. 1 como el mockup ganador.
