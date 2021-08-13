@@ -1,11 +1,11 @@
 ---
-name: Feature request
+name: Creación o mejora request
 about: Sugerir una idea o crear nueva funcionalidad para este proyecto
 title: 'Descripcion mejora o creación de funcionalidad'
 labels: 'enhancement'
 assignees: 'assing yourself'
 projects: 'Proyecto js'
-milistone: 'Postwork 3'
+milestone: 'Postwork 3'
 
 ---
 
@@ -21,7 +21,7 @@ A clear and concise description of any alternative solutions or features you've 
 **Additional context**
 Add any other context or screenshots about the feature request here.
 
-Sientete con la libertad de editar esta issue conforme a tus necesidades
+**Sientete con la libertad de editar esta issue conforme a tus necesidades**
 
 **Descripción**
 Tu descripción
