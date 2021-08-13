@@ -1,14 +1,16 @@
 ---
 name: Feature request
-about: Suggest an idea for this project
-title: ''
-labels: ''
-assignees: ''
+about: Sugerir una idea para este proyecto
+title: 'Mejora o creación de funcionalidad'
+labels: 'enhancement'
+assignees: 'assing yourself'
+projects: 'Proyecto js'
 
 ---
 
 **Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+A clear and concise description of what the problem is. 
+Ex. I'm always frustrated when [...]
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.
