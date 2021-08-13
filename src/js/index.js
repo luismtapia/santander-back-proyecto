@@ -1,2 +1,1 @@
 import "../sass/style.scss";
-
