@@ -9,11 +9,75 @@
     <title>Meal</title>
 </head>
 <body>
-    <div class="ui container">
-        <div class="ui segment">
-            <h1>Webpack Setup</h1>
-            <p>Listos para empezar</p>
+    <!--  -->
+    <div class="ui secondary brown inverted menu">
+        <a class="item">
+            <i class="bars link icon large"></i>
+        </a>
+        <div class="item">
+            <div class="ui left icon transparent input">
+                <input type="text" placeholder="Ingrese criterio de busqueda">
+                <i class="search inverted link icon large"></i>
+            </div>
         </div>
+        <h2 class="item">
+            Recetas
+        </h2>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui icon input" id="buscar">
+                    <i class="search inverted link icon large"></i>
+                    <i class="times inverted link icon large"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <main class="main">
+        <div class="ui active centered inline loader large cargando"></div>
+        <section class="ui centered cargando">
+            <div class="ui three column stackable grid">
+                <div class="column">
+                  <div class="ui raised segment">
+                    <div class="ui placeholder">
+                      <div class="image header">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="paragraph">
+                        <div class="medium line"></div>
+                        <div class="short line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="column">
+                  <div class="ui raised segment">
+                    <div class="ui placeholder">
+                      <div class="image header">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                      <div class="paragraph">
+                        <div class="medium line"></div>
+                        <div class="short line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </section>
+    </main>
+    <!--  -->
+    <div class="ui segment">
+        <h1>Webpack Setup</h1>
+        <p>Listos para empezar</p>
     </div>
 </body>
 </html>

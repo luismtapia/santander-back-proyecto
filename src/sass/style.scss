@@ -1,5 +1,45 @@
-$body-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
-body {
-  color: $body-color;
+
+$color-cafe1: #3D271F;
+$color-cafe2: #4d3412;
+$color-amarillo1: #F7CA15;
+$color-amarillo2: #FBD210;
+
+// $color-: #4F6728	color verde:
+// $color-: #B95A40	color naranja:
+// $color-: #DF8D17	color naranja 2:
+// $color-: #FFFFFF	color blanco: para contraste
+// $color-: #000000	color negro: para contraste
+// $color-: #63921e	color verde 2:
+// $color-: #f1e1bf;
+
+.ui.menu{
+    margin: 0;
+    .item{
+        font-family: 'Bebas Neue', cursive;
+        .times{
+            display: none;
+        }
+        .left{
+            display: none;
+        }
+    }
+}
+main{
+    // background: linear-gradient($color-cafe1 0%, $color-cafe2 100%), url("../assets/images/fondo1.jpg");
+    background: url("../assets/images/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: -1rem 0;
+    margin: 0;
+    padding-top: 100px;
+    height: 500px;
+}
+
+.cargando{
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 20px 0;
 }
