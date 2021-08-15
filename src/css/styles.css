@@ -1,0 +1,135 @@
+/* Mobile */
+
+.tablet.mobile.only .header,
+.ui.icon.button>.icon {
+    color: #fff;
+}
+
+
+/* 6311aa morado*/
+
+
+/*.tablet.mobile.only .header:hover {*/
+
+
+/* 4d3412 ourple  4d3412 cafe fuerte  3D271F cafe */
+
+.tablet.mobile.only .header:hover {
+    /* background-color: brown !important; */
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+
+/*CAMBIO DE COLOR A HAMBURGUESA*/
+
+
+/*AMARILLO F7CA15*/
+
+.ui.basic.button:hover {
+    background: #6311aa !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+
+/* COLOR DEL LIENZO DEL MENU  CAFE #4d3412*/
+
+.ui.vertical.menu {
+    display: none;
+    border: none;
+    box-shadow: none;
+    background-color: #3D271F;
+}
+
+.ui.vertical.menu>.item {
+    padding-left: 1.428em;
+    color: #000;
+}
+
+.ui.vertical.menu>.item.active {
+    padding-left: 1.428em;
+    background-color: #00ba49 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+
+/* color morado al dar clic 6311aa ahora amarillo*/
+
+.ui.vertical.menu>.item:hover {
+    padding-left: 1.428em;
+    background-color: #F7CA15 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.ui.vertical.menu>.item:active {
+    padding: 0.5em 1em;
+    background-color: #00ba49 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.ui.vertical.menu .item .title {
+    color: #fff;
+}
+
+.ui.vertical.menu .item .title .dropdown.icon {
+    float: none;
+    color: #fff;
+}
+
+.ui.vertical.menu .item .content .item {
+    padding: 0.5em 1em;
+    color: #fff;
+}
+
+.ui.vertical.menu .item .content .item:hover {
+    padding: 0.5em 1em;
+    background-color: #4a008a !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.ui.vertical.menu .item .content .item.active {
+    padding: 0.5em 1em;
+    background-color: #00ba49 !important;
+    color: #fff !important;
+    border-bottom: 1px solid #fff;
+}
+
+.ui.vertical.menu .header.item {
+    text-transform: uppercase;
+    color: #fff;
+}
+
+
+/* Nav */
+
+.ui.message {
+    background-color: rga(238, 238, 238);
+    box-shadow: none;
+    padding: 5em 4em;
+}
+
+.ui.message h1.ui.header {
+    font-size: 4.5em;
+    color: #4F6728;
+}
+
+.ui.message p.lead {
+    font-size: 1.3em;
+    color: #333333;
+    line-height: 1.4;
+    font-weight: 300;
+}
+
+.ui.purple.button {
+    background-color: #F7CA15;
+}
+
+body>.ui.header .content {
+    display: inline-block;
+    vertical-align: middle;
+}
