@@ -16,7 +16,12 @@
     <!-- Page Contents -->
     <div class="pusher">
         <script>
-            getRecipeByValue(2, 53013);
+            const valores = window.location.search;
+            console.log("Valores", valores);
+            const urlParams = new URLSearchParams(valores);
+            var id = urlParams.get('id');
+            console.log("id", id);
+            getRecipeByValue(2, id);
         </script>
     </div>
     <script src="./js/searchRecipe.js"></script>
