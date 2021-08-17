@@ -1,3 +1,6 @@
+import { getAleatoria, getCategorias, getCategoriasLength } from './search';
+getCategoriasLength();
+
 $('.ui .item').on('click', function() {
     $('.ui .item').removeClass('active');
     $(this).addClass('active');
@@ -18,7 +21,13 @@ $(document).ready(function() {
     $('.ui.accordion').accordion();
 
     // bind "hide and show vertical menu" event to top right icon button 
-    $('.ui.toggle.button').click(function() {
-        $('.ui.vertical.menu').toggle("250", "linear")
+    // toggle para mostrar o ocultar acordion de semantic-ui
+    $('#hamburguesa').click(function() {
+        $('#menu').toggle("250", "linear")
     });
+    $('#buscar').click(function() {
+        $('#busqueda').toggle("swing")
+    });
+
+    
 });
