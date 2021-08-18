@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="Semantic-UI-CSS-master/semantic.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id='letra'>n</p>
+    <div class="ui fixed borderless brown inverted huge menu">
+        <div class="ui container grid">
+            <!--Inicio: Desktop Nav-->
+            <div class="computer only row">
+                <h2 class="ui yellow header item">RECETAS</h2>
+                <a class="active item" href="index.html">The Meal API</a>
+                <div class="right menu">
+                </div>
+            </div>
+
+            <div class="tablet mobile only row">
+                <div class="left menu">
+                    <a class="menu item">
+                        <div class="ui basic icon brown inverted toggle button">
+                            <i class="content icon"></i>
+                        </div>
+                    </a>
+                </div>
+                <a href="index.html"><h2 class="header item">The Meal API</h2></a>
+                <div class="ui vertical accordion borderless fluid menu">
+                    <!-- Start: Search -->
+                    
+                    <!-- End: Search -->
+                    <a class="active item">Inicio</a>
+                    <a class="item">Todas las recetas</a>
+                    <a class="item" href="#">Receta al azar</a>
+                    <a class="item" href="#">Categorías</a>
+                    <div class="ui divider"></div>
+                    <a class="item" href="#">Acerca de...</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="ui segment">
+        <div id="carta" class="ui cards"></div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+    <script src="Semantic-UI-CSS-master/semantic.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
