@@ -14,18 +14,30 @@ $color-amarillo2: #FBD210;
 // $color-: #63921e	color verde 2:
 // $color-: #f1e1bf;
 
-.ui.menu{
-    margin: 0;
-    .item{
-        font-family: 'Bebas Neue', cursive;
-        .times{
-            display: none;
-        }
-        .left{
-            display: none;
-        }
-    }
+//rgba(167, 129, 26, 0.1)
+
+
+// SECTION MENÚ
+#menu, #busqueda, #hamburguesa > .times{
+    display: none;
 }
+#busqueda{
+    margin-top: 10px;
+}
+.ui.inverted.brown.menu, .ui.inverted.menu .brown.active.item {
+    background-color: $color-cafe1;
+}
+.ui.inverted.brown.menu .active.item {
+    background-color: $color-cafe2!important;
+}
+body{
+    // background: linear-gradient($color-cafe1 0%, $color-cafe2 75%, #fff 100%);
+    background: rgb(61,39,31);
+    background: linear-gradient(90deg, rgba(61,39,31,1) 0%, rgba(251,210,16,1) 35%, rgba(251,210,16,1) 100%);
+
+}
+
+// SECTION MAIN AL CARGAR LA PAGINA
 main{
     // background: linear-gradient($color-cafe1 0%, $color-cafe2 100%), url("../assets/images/fondo1.jpg");
     background: url("../assets/images/fondo1.jpg");
@@ -33,13 +45,43 @@ main{
     background-position: center;
     background-size: cover;
     margin: -1rem 0;
-    margin: 0;
+    margin: 50px 0 0 0;
     padding-top: 100px;
     height: 500px;
+    .cargando{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+    }
+    
+}
+.recetas{
+    display: none;
 }
 
-.cargando{
+//computer mediaquery
+#recetas{
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     margin: 20px 0;
+}
+
+@media (max-width: 600px){
+    #recetas{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+    }
+}
+
+// FOOTER
+footer{
+    height: 500px;
+    .informacion{
+        background-color: $color-cafe1;
+        .autores{
+            position: relative;
+            top: -200px;
+        }
+    }
 }
