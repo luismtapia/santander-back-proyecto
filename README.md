@@ -48,7 +48,7 @@ Como proyecto final vas a crear un buscador de recetas con las siguientes especi
 
 ---
 
-- [X] **Video**
+- [X] **[Video](https://drive.google.com/file/d/1sL5DL2_dnwTisIs2dnlbdBHG_iqHHYJ-/view?usp=sharing)**
 - [X] Duración máxima de 5 min.
 - [X] Sin errores de edición.
 - [X] Presentación de cada integrante del equipo y la explicación es clara.
