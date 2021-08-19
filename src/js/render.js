@@ -1,3 +1,4 @@
+import detalle from "../detalles.html";
 
 // ESTA FUNCION RENDERIZA(CREA) MODAL CON LA RECETA ALEATORIA
 function renderAleatoria(aleatoria) {
@@ -58,11 +59,11 @@ function renderAleatoria(aleatoria) {
     // ACCIONES EN MODAL
     const flag = document.createElement('i');
     const pais = banderas.get(aleatoria.meals[0].strArea);
-    flag.className = `${pais} flag strArea`;
+    flag.className = `${pais} flag`;
     const a = document.createElement('a');
     a.className = "ui green ok inverted icon button";
     a.textContent = aleatoria.meals[0].strArea;
-    a.href = `../showDetailRecipeById.html?id=${aleatoria.meals[0].idMeal}`; //arreglar en webpack para integrar cambios de equipo
+    a.href = `../detalles.html?id=${aleatoria.meals[0].idMeal}`; //link a detalles
     const i = document.createElement('i');
     i.className = "external alternate icon";
 
@@ -114,19 +115,8 @@ function renderCategorias(categorias) {
         header.className = "header";
         header.textContent = categoria.strCategory;
         const descripction = document.createElement('div');
-        descripction.className = "descripction";
+        descripction.className = "Ver descripction";
 
-
-        const details = document.createElement('details');
-        const summary = document.createElement('summary');
-        summary.textContent = "Descripción"
-
-        const p = document.createElement('p');
-        p.textContent =  categoria.strCategoryDescription;
-
-        summary.appendChild(p);
-        details.appendChild(summary);
-        descripction.appendChild(details);
         content.appendChild(header);
         content.appendChild(descripction);
         card.appendChild(content);
@@ -135,7 +125,24 @@ function renderCategorias(categorias) {
         extra.className = "extra content";
         const author = document.createElement('div');
         author.className = "author";
-        author.textContent = "detalles";
+
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = "Descripción"
+        const p = document.createElement('p');
+        p.textContent =  categoria.strCategoryDescription;
+
+        details.appendChild(summary);
+        details.appendChild(p);
+        author.appendChild(details);
+
+        const span = document.createElement('span');
+        span.className = "right floated";
+        const icono = document.createElement('i');
+        icono.className = "comments icon";
+
+        span.appendChild(icono);
+        extra.appendChild(span);
         extra.appendChild(author);
         card.appendChild(extra);
 
@@ -157,17 +164,13 @@ function renderRecetas(data) {
     const contenedor_recetas = document.querySelector('#recetas');
     contenedor_recetas.innerHTML = "";
     contenedor_recetas.className = "ui container";
-
     
     // genera las cards para mostrar resultados
     data.meals.forEach(meal => {
-        console.log(meal);
-
-
-
         const card = document.createElement('div');
         card.className = "ui card";
 
+        // div imagenes
         const image = document.createElement('div');
         image.className = "ui slide masked reveal image";
 
@@ -176,66 +179,115 @@ function renderRecetas(data) {
         img_visible.alt = "strMealThumb";
         img_visible.className = "visible content";
 
-        const img_hidden = document.createElement('img');
-        img_hidden.src = meal.strCategoryThumb;
-        img_hidden.alt = "strMealThumb";
-        img_hidden.className = "hidden content";
+        // EN HOVER
+        const div_hidden = document.createElement('div');
+        div_hidden.className = "ui left aligned grid hidden content";
+        const tags = document.createElement('div');
+        tags.className = "right aligned sixteen wide column";
+        if(meal.strTags){
+            const etiquetas = meal.strTags.split(',');
+            etiquetas.forEach(tag => {
+                const strTag = document.createElement('a');
+                strTag.className = "ui yellow mini tag label";
+                strTag.textContent = tag;
+                tags.appendChild(strTag);
+            });
+        }
+
+        const ingredientes = document.createElement('div');
+        ingredientes.className = "left floated center aligned one column row";
+        const column2 = document.createElement('div');
+        column2.className = "column";
+        column2.textContent = "Ingredientes";
+
+        const lista_ingredientes = document.createElement('div');
+        lista_ingredientes.className = "ui list mini sixteen wide column";
+
+        for (let i = 1; i <= 20; i++) {
+            const Ingredients = meal[`strIngredient${i}`];
+            if(Ingredients){
+                const item = document.createElement('a');
+                item.className = "item";
+    
+                const content = document.createElement('div');
+                content.className = "right floated content";
+                const thumb = document.createElement('img');
+                thumb.className = "ui avatar image strIngredientThumb";
+                thumb.src = `https://www.themealdb.com/images/ingredients/${Ingredients}-Small.png`;
+                const checkbox = document.createElement('div');
+                checkbox.className = "ui checkbox";
+                const input = document.createElement('input');
+                input.type = "checkbox";
+                const label = document.createElement('label');
+                label.className = "strIngredient";
+                label.textContent = `${Ingredients}`;
+    
+                
+                content.appendChild(thumb);
+                item.appendChild(content);
+                checkbox.appendChild(input);
+                checkbox.appendChild(label);
+                item.appendChild(checkbox);
+                lista_ingredientes.appendChild(item);
+            }
+
+
+            
+
+
+
+        }
+
+        // div content
+        const content = document.createElement('div');
+        content.className = "content";
+        const a = document.createElement('a');
+        a.href = `../detalles.html?id=${meal.idMeal}`;
+        a.className = "header";
+        a.textContent = meal.strMeal;
+        const meta = document.createElement('div');
+        meta.className = "meta";
+        const span = document.createElement('span');
+        span.className = "date";
+        span.textContent = meal.strCategory;
+        const i = document.createElement('i');
+        i.className = "utensil spoon icon";
+
+        // div extra content
+        const extra = document.createElement('div');
+        extra.className = "extra content";
+        const floated = document.createElement('span');
+        floated.className = "right floated";
+        const area =  meal.strArea;
+        const flag = document.createElement('i');
+        const pais = banderas.get(meal.strArea);
+        flag.className = `${pais} flag`;
+
 
         image.appendChild(img_visible);
-        image.appendChild(img_hidden);
+        div_hidden.appendChild(tags);
+        ingredientes.appendChild(column2);
+        div_hidden.appendChild(ingredientes);
+        div_hidden.appendChild(lista_ingredientes);
+        image.appendChild(div_hidden);
+
+        content.appendChild(a);
+        span.appendChild(i);
+        meta.appendChild(span);
+        content.appendChild(meta);
+        floated.appendChild(flag);
+        floated.append(area);
+        extra.appendChild(floated);
+
         card.appendChild(image);
+        card.appendChild(content);
+        card.appendChild(extra);
+        
         fragmento.appendChild(card);
     });
     
     contenedor_recetas.appendChild(fragmento);
 
-    
-
-    // categorias.categories.forEach(categoria => {
-    //     const card = document.createElement('div');
-    //     card.className = "ui raised link card";
-
-    //     const image = document.createElement('div');
-    //     image.className = "image";
-    //     const img = document.createElement('img');
-    //     img.src = categoria.strCategoryThumb;
-    //     img.alt = "strCategoryThumb";
-    //     image.appendChild(img);
-    //     card.appendChild(image);
-
-    //     const content = document.createElement('div');
-    //     content.className = "content";
-    //     const header = document.createElement('div');
-    //     header.className = "header";
-    //     header.textContent = categoria.strCategory;
-    //     const descripction = document.createElement('div');
-    //     descripction.className = "descripction";
-
-
-    //     const details = document.createElement('details');
-    //     const summary = document.createElement('summary');
-    //     summary.textContent = "Descripción"
-
-    //     const p = document.createElement('p');
-    //     p.textContent =  categoria.strCategoryDescription;
-
-    //     summary.appendChild(p);
-    //     details.appendChild(summary);
-    //     descripction.appendChild(details);
-    //     content.appendChild(header);
-    //     content.appendChild(descripction);
-    //     card.appendChild(content);
-        
-    //     const extra = document.createElement('div');
-    //     extra.className = "extra content";
-    //     const author = document.createElement('div');
-    //     author.className = "author";
-    //     author.textContent = "detalles";
-    //     extra.appendChild(author);
-    //     card.appendChild(extra);
-
-    //     contenedor_recetas.appendChild(card);
-    // });
     
 }
 
