@@ -181,21 +181,21 @@ function renderRecetas(data) {
 
         // EN HOVER
         const div_hidden = document.createElement('div');
-        div_hidden.className = "ui left aligned grid hidden content";
+        div_hidden.className = "ui left aligned grid hidden content green inverted";
         const tags = document.createElement('div');
-        tags.className = "right aligned sixteen wide column";
+        tags.className = "right aligned sixteen wide column green inverted";
         if(meal.strTags){
             const etiquetas = meal.strTags.split(',');
             etiquetas.forEach(tag => {
                 const strTag = document.createElement('a');
-                strTag.className = "ui yellow mini tag label";
+                strTag.className = "ui orange tiny tag label";
                 strTag.textContent = tag;
                 tags.appendChild(strTag);
             });
         }
 
         const ingredientes = document.createElement('div');
-        ingredientes.className = "left floated center aligned one column row";
+        ingredientes.className = "left floated center aligned one column row green inverted";
         const column2 = document.createElement('div');
         column2.className = "column";
         column2.textContent = "Ingredientes";

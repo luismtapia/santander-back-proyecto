@@ -3,8 +3,8 @@
 // FUENTES
 $menu: 'Bebas Neue', cursive;
 $titulo1: 'Cabin Sketch', cursive;
+$titulo2: 'Cinzel Decorative', cursive;
 $texto1: 'Cinzel', serif;
-$texto1: 'Cinzel Decorative', cursive;
 $texto2: 'Hammersmith One', sans-serif;
 
 // COLORES
@@ -62,14 +62,40 @@ main{
 .recetas{
     display: none;
 }
-
-//computer mediaquery
 #recetas{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin: 20px 0;
 }
 
+// FOOTER
+footer{
+    height: 500px;
+    font-family: $texto2;
+    .informacion{
+        background-color: $color-cafe;
+        .autores{
+            position: relative;
+            top: -200px;
+            .extra.content{
+                background-color: $color-verde-secondary;
+                .right.floated{
+                    color: white;
+                }
+            }
+        }
+        .ui.middle.aligned.link.animated.list.inverted{
+            .header{
+                font-family: $texto1;
+            }
+        }
+        
+    }
+}
+
+.content.animate__animated.animate__flip, .ui.yellow.header.item{
+    font-family: $titulo1;
+}
 
 
 @media (max-width: 600px){
@@ -78,16 +104,16 @@ main{
         grid-template-columns: 1fr;
         margin: 20px 0;
     }
-}
-
-// FOOTER
-footer{
-    height: 500px;
-    .informacion{
-        background-color: $color-cafe;
-        .autores{
-            position: relative;
-            top: -200px;
+    #chef{
+        display: none;
+    }
+    footer{
+        .informacion{
+            .autores{
+                position: relative;
+                top: -80px;
+            }
+            
         }
     }
 }
