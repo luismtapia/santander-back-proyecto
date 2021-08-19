@@ -1,5 +1,118 @@
-$body-color: red;
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch:wght@700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Hammersmith+One&display=swap');
 
-body {
-  color: $body-color;
+// FUENTES
+$menu: 'Bebas Neue', cursive;
+$titulo1: 'Cabin Sketch', cursive;
+$titulo2: 'Cinzel Decorative', cursive;
+$texto1: 'Cinzel', serif;
+$texto2: 'Hammersmith One', sans-serif;
+
+// COLORES
+$color-cafe: #3D271F;
+$color-cafe-secondary: #4d3412;
+$color-amarillo: #F7CA15;
+$color-amarillo-secondari: #FBD210;
+$color-verde: #4F6728;
+$color-verde-secondary: #63921e;
+$color-naranja: #B95A40;
+$color-naranja-secondary: #DF8D17;
+$color-contraste: #FFFFFF;
+$color-extra: #f1e1bf;
+//rgba(167, 129, 26, 0.1)
+
+
+// SECTION MENÚ
+#menu, #busqueda, #hamburguesa > .times{
+    display: none;
+}
+#busqueda{
+    margin-top: 10px;
+}
+.ui.inverted.brown.menu, .ui.inverted.menu .brown.active.item {
+    background-color: $color-cafe;
+}
+.ui.inverted.brown.menu .active.item {
+    background-color: $color-cafe-secondary!important;
+}
+body{
+    // background: linear-gradient($color-cafe1 0%, $color-cafe2 75%, #fff 100%);
+    background: rgb(61,39,31);
+    background: linear-gradient(90deg, rgba(61,39,31,1) 0%, rgba(251,210,16,1) 35%, rgba(251,210,16,1) 100%);
+    font-family: $texto2;
+}
+
+// SECTION MAIN AL CARGAR LA PAGINA
+main{
+    // background: linear-gradient($color-cafe1 0%, $color-cafe2 100%), url("../assets/images/fondo1.jpg");
+    background: url("../assets/images/fondo1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin: -1rem 0;
+    margin: 50px 0 0 0;
+    padding-top: 100px;
+    height: 500px;
+    .cargando{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 20px 0;
+    }
+    
+}
+.recetas{
+    display: none;
+}
+#recetas{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 20px 0;
+}
+
+// FOOTER
+footer{
+    height: 500px;
+    font-family: $texto2;
+    .informacion{
+        background-color: $color-cafe;
+        .autores{
+            position: relative;
+            top: -200px;
+            .extra.content{
+                background-color: $color-verde-secondary;
+                .right.floated{
+                    color: white;
+                }
+            }
+        }
+        .ui.middle.aligned.link.animated.list.inverted{
+            .header{
+                font-family: $texto1;
+            }
+        }
+        
+    }
+}
+
+.content.animate__animated.animate__flip, .ui.yellow.header.item{
+    font-family: $titulo1;
+}
+
+
+@media (max-width: 600px){
+    #recetas{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #chef{
+        display: none;
+    }
+    footer{
+        .informacion{
+            .autores{
+                position: relative;
+                top: -80px;
+            }
+            
+        }
+    }
 }

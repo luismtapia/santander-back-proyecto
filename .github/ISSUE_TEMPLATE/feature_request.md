@@ -1,4 +1,5 @@
 ---
+
 name: Creación o mejora request
 about: Sugerir una idea o crear nueva funcionalidad para este proyecto
 title: 'Descripción mejora o creación de funcionalidad'
@@ -13,7 +14,8 @@ milestone: 'Postwork 3'
 
 
 **Is your feature request related to a problem? Please describe.**
-A clear and concise description of what the problem is. Ex. I'm always frustrated when [...]
+A clear and concise description of what the problem is. 
+Ex. I'm always frustrated when [...]
 
 **Describe the solution you'd like**
 A clear and concise description of what you want to happen.

@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <title>Meal</title>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="ui fixed borderless brown inverted huge menu">
+        <div class="ui container grid">
+            <!--Inicio: Desktop Nav-->
+            <div class="computer only row">
+                <h1 class="ui yellow header item">RECETAS</h1>
+                <a class="active item" href="">TODAS</a>
+                <a class="item" id="randomcomputer">ALEATORIA</a>
+                <a class="item" id="categoriescomputer">CATEGORIAS</a>
+                <div class="right menu">
+                    <!-- Start: Search -->
+                    <div class="item" id="buscarcomputer">
+                        <div class="ui icon input">
+                            <input size="40" type="text" placeholder="Ingrese criterio de busqueda">
+                            <i class="search link icon" ></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Inicio Móvil -->
+            <div class="tablet mobile only row">
+                <div class="left menu">
+                    <a class="menu item">
+                        <div class="ui link icon huge brown inverted toggle " id="hamburguesa">
+                            <i class="bars link icon large animate__animated"></i>
+                            <i class="times link icon large animate__animated"></i>
+                        </div>
+                    </a>
+                </div>
+                <div class="menu animate__animated animate__bounce">
+                    <h2 class="header item">The Meal API</h2>
+                </div>
+                <div class="right menu">
+                    <div class="item">
+                        <div class="ui icon input" id="buscar">
+                            <i class="search inverted link icon large animate__animated"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="ui vertical accordion borderless fluid brown inverted menu" id="menu">
+                    <a class="active item" href="">
+                        Inicio
+                    </a>
+                    <a class="item" id="categoriesmobile">
+                        Categorias
+                        <div class="ui yellow left circular label" id="categories">0</div>
+                    </a>
+                    <a class="item" id="randommobile">
+                        Receta al azar
+                    </a>
+                    <div class="ui divider"></div>
+                    <a class="item" href="#about">
+                        Acerca de...
+                        <i class="user icon"></i>
+                    </a>
+                </div>
+                <div class="ui vertical accordion borderless fluid brown inverted menu" id="busqueda">
+                    <!-- Start: Search -->
+                    <a class="item">
+                        <div class="ui icon input" id="cerrar">
+                            <input type="text" placeholder="Ingrese criterio de busqueda">
+                            <i class="times link icon"></i>
+                        </div>
+                    </a>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Preloader al cargar mpagina antes de consumir la API -->
+    <main class="main cargando">
+        <div class="ui active centered inline loader large"></div>
+        <section class="ui centered container">
+            <div class="ui three column stackable grid">
+                <div class="column">
+                    <div class="ui raised segment">
+                        <div class="ui placeholder">
+                            <div class="image header">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="paragraph">
+                                <div class="medium line"></div>
+                                <div class="short line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised segment">
+                        <div class="ui placeholder">
+                            <div class="image header">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="paragraph">
+                                <div class="medium line"></div>
+                                <div class="short line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="ui raised segment">
+                        <div class="ui placeholder">
+                            <div class="image header">
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                            <div class="paragraph">
+                                <div class="medium line"></div>
+                                <div class="short line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                                <div class="line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <main class="recetas" >
+        <!-- Muestra imagen una vez cargadas las recetas -->
+        <section class="ui container">
+            <h1 class="ui center aligned icon header inverted">
+                <i class="utensils icon inverted"></i>
+                <div class="content animate__animated animate__flip">
+                    TheMealAPI
+                    <div class="sub header">Consulte terminos y condiciones</div>
+                </div>
+            </h1>
+            
+            <div class="ui center aligned grid">
+                <div class="ui medium images">
+                    <img src="./src/assets/images/Meal_Flatline.svg">
+                    <img src="./src/assets/images/Chef_Outline.svg" id="chef">
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section class="ui container" id="recetas">
+        <!-- Contenedor para las recetas a mostrar -->
+    </section>
+    
+
+    <!-- Modal para Receta ALEATORIA-->
+    <article class="ui long modal" id="modalrandom">
+        <!-- <div class="ui long modal"> -->
+            <i class="close icon"></i>
+            <div class="header strMeal">
+                strMeal
+            </div>
+            <div class="scrolling image content">
+                <div class="ui medium image">
+                    <img src="https://semantic-ui.com/images/avatar2/small/lena.png" alt="imagen" class="strMealThumb">
+                </div>
+                <div class="description">
+                    <div class="ui header right aligned container strCategory">strCategory</div> <br>
+                    <div class="ui center aligned grid strTags">
+                        <a class="ui yellow tag label">strTags</a>
+                    </div>
+                    
+                    <p class="ui center aligned"><br></p>
+                    <p>Ingredientes</p>
+
+                    <div class="ui middle aligned divided list strIngredients">
+                        <a class="item">
+                            <div class="right floated content">
+                                <img class="ui avatar image strIngredientThumb" src="https://semantic-ui.com/images/avatar2/small/lena.png">
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox">
+                                <label class="strIngredient">strMeasure1 - strIngredient1</label>
+                            </div>
+                        </a>
+                        <a class="item">
+                            <div class="right floated content">
+                                <img class="ui avatar image" src="https://semantic-ui.com/images/avatar2/small/lena.png">
+                            </div>
+                            <div class="ui checkbox">
+                                <input type="checkbox" name="public">
+                                <label>strMeasure2 - strIngredient2</label>
+                            </div>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+            <div class="actions">
+                <i class="france flag strArea" id="flag"></i>
+            </div>
+        <!-- </div> -->
+    </article>
+
+    <footer>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D271F" fill-opacity="1" d="M0,96L60,96C120,96,240,96,360,117.3C480,139,600,181,720,197.3C840,213,960,203,1080,176C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
+        <section class="informacion" id="about">
+            <section class="autores">
+                <div class="ui container grid">
+                    <div class="computer only row">
+                        <div class="ui five link cards">
+                            <a class="card" href="https://github.com/Ali-F2" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Aliciaflores.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Alicia </div>
+                                    <div class="meta">
+                                        <span class="date">Flores Flores</span>
+                                    </div>
+                                    <div class="description">
+                                        
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/frasgado" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Fabiolafrasgado.jpg">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Fabiola</div>
+                                    <div class="meta">
+                                        <span class="date">Frasgado Celaya</span>
+                                    </div>
+                                    <div class="description">
+                                        Analista y Programador
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/14030598" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Luismanueltapia.jpg">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Luis Manuel</div>
+                                    <div class="meta">
+                                        <span class="date">Tapia Bautista</span>
+                                    </div>
+                                    <div class="description">
+                                        Ingeniero en Sistemas Computacionales
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/macantivbl" target="_blank">
+                                <div class="image">
+                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Vicente</div>
+                                    <div class="meta">
+                                        <span class="date">Barbosa León</span>
+                                    </div>
+                                    <div class="description">
+                                        
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/IvanVargasJ" target="_blank">
+                                <div class="image">
+                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Carlos Iván</div>
+                                    <div class="meta">
+                                        <span class="date">Vargas Jiménez</span>
+                                    </div>
+                                    <div class="description">
+                                        Ing. Sistemas Computacionales
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="tablet mobile only row">
+                        <div class="ui two link cards">
+                            <a class="card" href="https://github.com/Ali-F2" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Aliciaflores.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Alicia </div>
+                                    <div class="meta">
+                                        <span class="date">Flores Flores</span>
+                                    </div>
+                                    <div class="description">
+                                        
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/frasgado" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Fabiolafrasgado.jpg">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Fabiola</div>
+                                    <div class="meta">
+                                        <span class="date">Frasgado Celaya</span>
+                                    </div>
+                                    <div class="description">
+                                        Analista y Programador
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/14030598" target="_blank">
+                                <div class="image">
+                                    <img src="./src/assets/images/Luismanueltapia.jpg">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Luis Manuel</div>
+                                    <div class="meta">
+                                        <span class="date">Tapia Bautista</span>
+                                    </div>
+                                    <div class="description">
+                                        Ingeniero en Sistemas Computacionales
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/macantivbl" target="_blank">
+                                <div class="image">
+                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Vicente</div>
+                                    <div class="meta">
+                                        <span class="date">Barbosa León</span>
+                                    </div>
+                                    <div class="description">
+                                        
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                            <a class="card" href="https://github.com/IvanVargasJ" target="_blank">
+                                <div class="image">
+                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                </div>
+                                
+                                <div class="content">
+                                    <div class="header">Carlos Iván</div>
+                                    <div class="meta">
+                                        <span class="date">Vargas Jiménez</span>
+                                    </div>
+                                    <div class="description">
+                                        Ing. Sistemas Computacionales
+                                    </div>
+                                </div>
+                                <div class="extra content">
+                                    <span class="right floated">
+                                        <i class="github icon"></i>
+                                        Github
+                                    </span>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+
+            </section>
+            <section class="ui container">
+                <div class="ui horizontal divider inverted">Acerca de</div>
+                
+                <div class="ui two column centered grid">
+                    <div class="column">
+                        <div class="ui middle aligned link animated list inverted">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Contacto</div>
+                                </div>
+                            </a>
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Repositorio</div>
+                                </div>
+                            </a>
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/wiki/Documentaci%C3%B3n" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Documentación</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui middle aligned link animated list inverted">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/wiki/Presentaci%C3%B3n" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Equipo 4</div>
+                                </div>
+                            </a>
+                            <a class="item" href="https://bedu.org/" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Bedu</div>
+                                </div>
+                            </a>
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Agradecimientos</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+                
+
+                <br><br>
+                <div class="ui horizontal divider inverted">Recursos</div>
+
+                <div class="ui two column centered grid">
+                    <div class="column">
+                        <div class="ui middle aligned link animated list inverted">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/network" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Ramas</div>
+                                </div>
+                            </a>
+                            <a class="item" href="video" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Video</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="ui middle aligned link animated list inverted">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/wiki/Rubros-a-evaluar-para-la-entrega-de-proyecto-final" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">Rubros a evaluar</div>
+                                </div>
+                            </a>
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
+                                <i class="address card icon"></i>
+                                <div class="content">
+                                    <div class="header">About</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <br><br>
+            </section>
+            
+            <section class="ui container">
+                <div class="ui center aligned grid">
+                    <div class="center floated center aligned six wide column">
+                        <a href="https://google.com" class="ui medium image">
+                            <img src="./src/assets/images/qr.png">
+                        </a>
+                    </div>
+                </div>
+                <br><br>
+                <div class="ui horizontal divider inverted">Herramientas utilizadas</div>
+
+                <div class="ui grid">
+                    <div class="center aligned two column row">
+                        <div class="column">
+                            <a class="ui circular icon button brown" target="_blank" href="https://git-scm.com/" data-content="git">
+                                <i class="git icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://github.com/" data-content="github">
+                                <i class="github icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://nodejs.org/es/" data-content="node js">
+                                <i class="node js icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://www.npmjs.com/" data-content="npm">
+                                <i class="npm icon"></i>
+                            </a>
+                        </div>
+                        <div class="column">
+                            <a class="ui circular icon button brown" target="_blank" href="https://semantic-ui.com/" data-content="semantic-ui">
+                                <i class="css3 icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://sass-lang.com/" data-content="sass">
+                                <i class="sass icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://discord.com/" data-content="discord">
+                                <i class="discord icon"></i>
+                            </a>
+                            <a class="ui circular icon button brown" target="_blank" href="https://webpack.js.org/" data-content="webpack">
+                                <i class="free code camp icon"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+                
+                <div class="ui centered grid">
+                    <div class="center floated center aligned six wide column">
+                        <i class="copyright outline icon inverted" id="copyright"></i>
+                    </div>
+                </div>
+            </section>
+        </section>
+    </footer>
+
+</body>
+
+</html>
