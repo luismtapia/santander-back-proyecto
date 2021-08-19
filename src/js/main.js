@@ -98,6 +98,8 @@ btn_categorias_mobile.addEventListener("click", (event) => {
     getConsulta('https://www.themealdb.com/api/json/v1/1/categories.php')
         .then((data)=> {
             renderCategorias(data);
+            // const alinear = document.querySelector('#recetas');
+            // alinear.className = "ui center aligned grid";
         })
         .catch((error)=>{
             console.log('No hay resultados:', error)
