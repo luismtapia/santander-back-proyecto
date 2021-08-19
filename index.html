@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-    <!-- <script src="./js/menu.js"></script> -->
     <title>Meal</title>
 </head>
 
@@ -20,16 +18,16 @@
         <div class="ui container grid">
             <!--Inicio: Desktop Nav-->
             <div class="computer only row">
-                <h2 class="ui yellow header item">RECETAS</h2>
+                <h1 class="ui yellow header item">RECETAS</h1>
                 <a class="active item" href="">TODAS</a>
                 <a class="item" id="randomcomputer">ALEATORIA</a>
                 <a class="item" id="categoriescomputer">CATEGORIAS</a>
                 <div class="right menu">
                     <!-- Start: Search -->
-                    <div class="item">
+                    <div class="item" id="buscarcomputer">
                         <div class="ui icon input">
                             <input size="40" type="text" placeholder="Ingrese criterio de busqueda">
-                            <i class="search link icon"></i>
+                            <i class="search link icon" ></i>
                         </div>
                     </div>
                 </div>
@@ -57,11 +55,8 @@
                 </div>
                 
                 <div class="ui vertical accordion borderless fluid brown inverted menu" id="menu">
-                    <a class="active item">
+                    <a class="active item" href="">
                         Inicio
-                    </a>
-                    <a class="teal item">
-                        Todas las recetas
                     </a>
                     <a class="item" id="categoriesmobile">
                         Categorias
@@ -151,12 +146,29 @@
     </main>
 
     <main class="recetas" >
-        <!-- <section class="ui container"></section> -->
+        <!-- Muestra imagen una vez cargadas las recetas -->
+        <section class="ui container">
+            <h1 class="ui center aligned icon header inverted">
+                <i class="utensils icon inverted"></i>
+                <div class="content animate__animated animate__flip">
+                    TheMealAPI
+                    <div class="sub header">Consulte terminos y condiciones</div>
+                </div>
+            </h1>
+            
+            <div class="ui center aligned grid">
+                <div class="ui medium images">
+                    <img src="./src/assets/images/Meal_Flatline.svg">
+                    <img src="./src/assets/images/Chef_Outline.svg" id="chef">
+                </div>
+            </div>
+        </section>
     </main>
 
     <section class="ui container" id="recetas">
-
+        <!-- Contenedor para las recetas a mostrar -->
     </section>
+    
 
     <!-- Modal para Receta ALEATORIA-->
     <article class="ui long modal" id="modalrandom">
@@ -207,22 +219,16 @@
         <!-- </div> -->
     </article>
 
-    
-
-
-    
-    
-
     <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D271F" fill-opacity="1" d="M0,96L60,96C120,96,240,96,360,117.3C480,139,600,181,720,197.3C840,213,960,203,1080,176C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-        <section class="informacion">
+        <section class="informacion" id="about">
             <section class="autores">
                 <div class="ui container grid">
                     <div class="computer only row">
                         <div class="ui five link cards">
                             <a class="card" href="https://github.com/Ali-F2" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                                    <img src="./src/assets/images/Aliciaflores.png">
                                 </div>
                                 
                                 <div class="content">
@@ -243,7 +249,7 @@
                             </a>
                             <a class="card" href="https://github.com/frasgado" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                                    <img src="./src/assets/images/Fabiolafrasgado.jpg">
                                 </div>
                                 
                                 <div class="content">
@@ -264,7 +270,7 @@
                             </a>
                             <a class="card" href="https://github.com/14030598" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                    <img src="./src/assets/images/Luismanueltapia.jpg">
                                 </div>
                                 
                                 <div class="content">
@@ -331,7 +337,7 @@
                         <div class="ui two link cards">
                             <a class="card" href="https://github.com/Ali-F2" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                                    <img src="./src/assets/images/Aliciaflores.png">
                                 </div>
                                 
                                 <div class="content">
@@ -352,7 +358,7 @@
                             </a>
                             <a class="card" href="https://github.com/frasgado" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/molly.png">
+                                    <img src="./src/assets/images/Fabiolafrasgado.jpg">
                                 </div>
                                 
                                 <div class="content">
@@ -373,7 +379,7 @@
                             </a>
                             <a class="card" href="https://github.com/14030598" target="_blank">
                                 <div class="image">
-                                    <img src="https://semantic-ui.com/images/avatar2/large/matthew.png">
+                                    <img src="./src/assets/images/Luismanueltapia.jpg">
                                 </div>
                                 
                                 <div class="content">
@@ -441,18 +447,18 @@
 
             </section>
             <section class="ui container">
-                <div class="ui horizontal divider inverted" id="about">Acerca de</div>
+                <div class="ui horizontal divider inverted">Acerca de</div>
                 
                 <div class="ui two column centered grid">
                     <div class="column">
                         <div class="ui middle aligned link animated list inverted">
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Contacto</div>
                                 </div>
                             </a>
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Repositorio</div>
@@ -468,7 +474,7 @@
                     </div>
                     <div class="column">
                         <div class="ui middle aligned link animated list inverted">
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/wiki/Presentaci%C3%B3n" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Equipo 4</div>
@@ -480,7 +486,7 @@
                                     <div class="header">Bedu</div>
                                 </div>
                             </a>
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Agradecimientos</div>
@@ -499,13 +505,13 @@
                 <div class="ui two column centered grid">
                     <div class="column">
                         <div class="ui middle aligned link animated list inverted">
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/network" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
-                                    <div class="header">Documentación</div>
+                                    <div class="header">Ramas</div>
                                 </div>
                             </a>
-                            <a class="item">
+                            <a class="item" href="video" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Video</div>
@@ -515,13 +521,13 @@
                     </div>
                     <div class="column">
                         <div class="ui middle aligned link animated list inverted">
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/wiki/Rubros-a-evaluar-para-la-entrega-de-proyecto-final" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">Rubros a evaluar</div>
                                 </div>
                             </a>
-                            <a class="item">
+                            <a class="item" href="https://github.com/14030598/santander-back-proyecto/pulse" target="_blank">
                                 <i class="address card icon"></i>
                                 <div class="content">
                                     <div class="header">About</div>
@@ -532,43 +538,46 @@
                 </div>
                 <br><br>
             </section>
+            
             <section class="ui container">
-                <div class="ui centered grid">
+                <div class="ui center aligned grid">
                     <div class="center floated center aligned six wide column">
                         <a href="https://google.com" class="ui medium image">
                             <img src="./src/assets/images/qr.png">
                         </a>
                     </div>
                 </div>
+                <br><br>
+                <div class="ui horizontal divider inverted">Herramientas utilizadas</div>
 
                 <div class="ui grid">
                     <div class="center aligned two column row">
                         <div class="column">
-                            <a class="ui circular icon button brown">
+                            <a class="ui circular icon button brown" target="_blank" href="https://git-scm.com/" data-content="git">
                                 <i class="git icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
+                            <a class="ui circular icon button brown" target="_blank" href="https://github.com/" data-content="github">
                                 <i class="github icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
+                            <a class="ui circular icon button brown" target="_blank" href="https://nodejs.org/es/" data-content="node js">
                                 <i class="node js icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
+                            <a class="ui circular icon button brown" target="_blank" href="https://www.npmjs.com/" data-content="npm">
                                 <i class="npm icon"></i>
                             </a>
                         </div>
                         <div class="column">
-                            <a class="ui circular icon button brown">
-                                <i class="chrome icon"></i>
+                            <a class="ui circular icon button brown" target="_blank" href="https://semantic-ui.com/" data-content="semantic-ui">
+                                <i class="css3 icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
+                            <a class="ui circular icon button brown" target="_blank" href="https://sass-lang.com/" data-content="sass">
                                 <i class="sass icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
-                                <i class="slack icon"></i>
+                            <a class="ui circular icon button brown" target="_blank" href="https://discord.com/" data-content="discord">
+                                <i class="discord icon"></i>
                             </a>
-                            <a class="ui circular icon button brown">
-                                <i class="html5 icon"></i>
+                            <a class="ui circular icon button brown" target="_blank" href="https://webpack.js.org/" data-content="webpack">
+                                <i class="free code camp icon"></i>
                             </a>
                         </div>
                     </div>

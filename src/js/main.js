@@ -1,9 +1,19 @@
-import { getAleatoria, getCategorias, getCategoriasLength } from './search';
-import { renderAleatoria, renderCategorias } from './render';
+import { getRecetaName, getConsulta } from './search';
+import { renderAleatoria, renderCategorias, renderRecetas } from './render';
+
+// ONLOAD CARGA ALGUNAS RECETAS
+getConsulta('https://www.themealdb.com/api/json/v1/1/search.php?s')
+    .then((data)=> {
+        if(data.meals)
+            renderRecetas(data); // LLAMADA A FUNCION QUE RENDERIZA LOS RESULTADOS DE LA CONSULTA
+    })
+    .catch((error)=>{
+        alert(`Fallo la conexion con TheMealAPI`);
+        console.log(error);
+    });
 
 
 // ANIMACIONES DEL MENU MÓVIL
-const btn_hamburguesa = document.querySelector('#hamburguesa');
 const btn_hamburguesa_bars = document.querySelector('#hamburguesa .bars');
 const btn_hamburguesa_cerrar = document.querySelector('#hamburguesa .times');
 const btn_buscar = document.querySelector('#buscar .search');
@@ -27,31 +37,28 @@ btn_hamburguesa_cerrar.addEventListener("click", (event) => {
     animacion_menu(btn_hamburguesa_cerrar,btn_hamburguesa_bars,200);
 });
 
-btn_buscar.addEventListener("click", (event) => {
-    //buscar
-});
-
 btn_cerrar.addEventListener("click", (event) => {
     let text_buscar = document.querySelector("#cerrar input");
     text_buscar.value = "";
 });
 
-//Receta aleatroria en modal
+
+
+
+
+// MOSTRAR RECETA ALEATORIA EN MODAL
 const btn_aleatoria_computer = document.querySelector('#randomcomputer');
 const btn_aleatoria_mobile = document.querySelector('#randommobile');
 
-
-
-
-
 btn_aleatoria_computer.addEventListener("click", (event) => {
     $('.long.modal').modal('show');
-    getAleatoria()
+    getConsulta('https://www.themealdb.com/api/json/v1/1/random.php')
         .then((data)=> {
             renderAleatoria(data)
         })
         .catch(()=>{
-            console.log('No hay resultados')
+            alert(`Upps algo salio mal por favor contacte a nuestro soporte`);
+            console.log('Error', error);
         });
 });
 
@@ -59,21 +66,24 @@ btn_aleatoria_mobile.addEventListener("click", (event) => {
     animacion_menu(btn_hamburguesa_cerrar,btn_hamburguesa_bars,200);
     $('#menu').toggle("250", "linear");
     $('.long.modal').modal('show');
-    getAleatoria()
+    getConsulta('https://www.themealdb.com/api/json/v1/1/random.php')
         .then((data)=> {
             renderAleatoria(data)
         })
         .catch((error)=>{
-            console.log('No hay resultados:', error)
+            alert(`Upps algo salio mal por favor contacte a nuestro soporte`);
+            console.log('Error', error);
         });
 });
+
+
 
 // Categorias
 const btn_categorias_computer = document.querySelector('#categoriescomputer');
 const btn_categorias_mobile = document.querySelector('#categoriesmobile');
 
 btn_categorias_computer.addEventListener("click", (event) => {
-    getCategorias()
+    getConsulta('https://www.themealdb.com/api/json/v1/1/categories.php')
         .then((data)=> {
             renderCategorias(data);
         })
@@ -85,9 +95,65 @@ btn_categorias_computer.addEventListener("click", (event) => {
 btn_categorias_mobile.addEventListener("click", (event) => {
     animacion_menu(btn_hamburguesa_cerrar,btn_hamburguesa_bars,200);
     $('#menu').toggle("250", "linear");
-    getCategorias()
+    getConsulta('https://www.themealdb.com/api/json/v1/1/categories.php')
         .then((data)=> {
             renderCategorias(data);
+            // const alinear = document.querySelector('#recetas');
+            // alinear.className = "ui center aligned grid";
+        })
+        .catch((error)=>{
+            console.log('No hay resultados:', error)
+        });
+});
+
+
+
+// BUSQUEDA DE RECETAS POR BOTON O AL ESCRIBIR
+const input_buscar_computer = document.querySelector('#buscarcomputer input');
+const btn_buscar_computer = document.querySelector('#buscarcomputer i');
+const input_buscar_mobile = document.querySelector('#cerrar input');
+
+btn_buscar_computer.addEventListener("click", (event) => {
+    const busqueda = input_buscar_computer.value;
+    getRecetaName(busqueda)
+        .then((data)=> {
+            if(data.meals){
+                renderRecetas(data);
+            }else{
+                alert(`No hay resultados para ${busqueda}`);
+            }
+        })
+        .catch((error)=>{
+            console.log('No hay resultados:', error)
+        });
+});
+
+input_buscar_computer.addEventListener("keyup", (event) => {
+    const busqueda = input_buscar_computer.value;
+    getRecetaName(busqueda)
+        .then((data)=> {
+            if(data.meals){
+                renderRecetas(data);
+            }else{
+                alert(`No hay resultados para ${busqueda}`);
+            }
+        })
+        .catch((error)=>{
+            console.log('No hay resultados:', error)
+        });
+});
+
+
+input_buscar_mobile.addEventListener("keyup", (event) => {
+    input_buscar_computer.value = "";
+    const busqueda = input_buscar_mobile.value;
+    getRecetaName(busqueda)
+        .then((data)=> {
+            if(data.meals){
+                renderRecetas(data);
+            }else{
+                alert(`No hay resultados para ${busqueda}`);
+            }
         })
         .catch((error)=>{
             console.log('No hay resultados:', error)

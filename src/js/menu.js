@@ -19,6 +19,7 @@ $(document).ready(function() {
         });
     $('.ui.dropdown').dropdown();
     $('.ui.accordion').accordion();
+    $('.ui.circular.icon.button').popup();
 
     // bind "hide and show vertical menu" event to top right icon button 
     // toggle para mostrar o ocultar acordion de semantic-ui
