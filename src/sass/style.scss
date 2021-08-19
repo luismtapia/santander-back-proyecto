@@ -1,19 +1,23 @@
-@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cabin+Sketch:wght@700&family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=Hammersmith+One&display=swap');
 
+// FUENTES
+$menu: 'Bebas Neue', cursive;
+$titulo1: 'Cabin Sketch', cursive;
+$texto1: 'Cinzel', serif;
+$texto1: 'Cinzel Decorative', cursive;
+$texto2: 'Hammersmith One', sans-serif;
 
-$color-cafe1: #3D271F;
-$color-cafe2: #4d3412;
-$color-amarillo1: #F7CA15;
-$color-amarillo2: #FBD210;
-
-// $color-: #4F6728	color verde:
-// $color-: #B95A40	color naranja:
-// $color-: #DF8D17	color naranja 2:
-// $color-: #FFFFFF	color blanco: para contraste
-// $color-: #000000	color negro: para contraste
-// $color-: #63921e	color verde 2:
-// $color-: #f1e1bf;
-
+// COLORES
+$color-cafe: #3D271F;
+$color-cafe-secondary: #4d3412;
+$color-amarillo: #F7CA15;
+$color-amarillo-secondari: #FBD210;
+$color-verde: #4F6728;
+$color-verde-secondary: #63921e;
+$color-naranja: #B95A40;
+$color-naranja-secondary: #DF8D17;
+$color-contraste: #FFFFFF;
+$color-extra: #f1e1bf;
 //rgba(167, 129, 26, 0.1)
 
 
@@ -25,16 +29,16 @@ $color-amarillo2: #FBD210;
     margin-top: 10px;
 }
 .ui.inverted.brown.menu, .ui.inverted.menu .brown.active.item {
-    background-color: $color-cafe1;
+    background-color: $color-cafe;
 }
 .ui.inverted.brown.menu .active.item {
-    background-color: $color-cafe2!important;
+    background-color: $color-cafe-secondary!important;
 }
 body{
     // background: linear-gradient($color-cafe1 0%, $color-cafe2 75%, #fff 100%);
     background: rgb(61,39,31);
     background: linear-gradient(90deg, rgba(61,39,31,1) 0%, rgba(251,210,16,1) 35%, rgba(251,210,16,1) 100%);
-
+    font-family: $texto2;
 }
 
 // SECTION MAIN AL CARGAR LA PAGINA
@@ -66,6 +70,8 @@ main{
     margin: 20px 0;
 }
 
+
+
 @media (max-width: 600px){
     #recetas{
         display: grid;
@@ -78,7 +84,7 @@ main{
 footer{
     height: 500px;
     .informacion{
-        background-color: $color-cafe1;
+        background-color: $color-cafe;
         .autores{
             position: relative;
             top: -200px;

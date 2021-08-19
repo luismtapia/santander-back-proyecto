@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
     <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-    <!-- <link rel="stylesheet" href="./css/styles.css"> -->
-    <!-- <script src="./js/menu.js"></script> -->
     <title>Meal</title>
 </head>
 
@@ -26,10 +24,10 @@
                 <a class="item" id="categoriescomputer">CATEGORIAS</a>
                 <div class="right menu">
                     <!-- Start: Search -->
-                    <div class="item">
+                    <div class="item" id="buscarcomputer">
                         <div class="ui icon input">
                             <input size="40" type="text" placeholder="Ingrese criterio de busqueda">
-                            <i class="search link icon"></i>
+                            <i class="search link icon" ></i>
                         </div>
                     </div>
                 </div>
@@ -151,11 +149,27 @@
     </main>
 
     <main class="recetas" >
-        <!-- <section class="ui container"></section> -->
+        <!-- Muestra imagen una vez cargadas las recetas -->
+        <section class="ui container">
+            <h2 class="ui center aligned icon header inverted">
+                <i class="utensils icon inverted"></i>
+                <div class="content">
+                    TheMealAPI
+                    <div class="sub header">Consulte terminos y condiciones</div>
+                </div>
+            </h2>
+            
+            <div class="ui center aligned grid">
+                <div class="ui medium images">
+                    <img src="./src/assets/images/Meal_Flatline.svg">
+                    <img src="./src/assets/images/Chef_Outline.svg">
+                </div>
+            </div>
+        </section>
     </main>
 
     <section class="ui container" id="recetas">
-
+        <!-- Contenedor para las recetas a mostrar -->
     </section>
 
     <!-- Modal para Receta ALEATORIA-->
@@ -209,9 +223,65 @@
 
     
 
+    <details>
+        <summary>Ver descripcion</summary>
+        <p>holajjs</p>
+    </details>
+    
+    <!-- hay que crearla -->
+    <section>
+        <div class="ui card">
+            <div class="ui slide masked reveal image">
+              <img src="https://semantic-ui.com/images/avatar/large/jenny.jpg" class="visible content">
+              <img src="https://semantic-ui.com/images/avatar/large/elliot.jpg" class="hidden content">
+            </div>
+            <div class="content">
+              <a class="header">strMeal</a>
+              <div class="meta">
+                <span class="date">Created in Sep 2014</span>
+              </div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    strArea en flag tambien
+                </span>
+              <a>
+                <i class="users icon"></i>
+                2 Members
+              </a>
+            </div>
+        </div>
+    </section>
 
-    
-    
+
+
+
+    <section>
+        <div class="ui card">
+            <div class="ui slide masked reveal image">
+              <img src="https://semantic-ui.com/images/avatar/large/jenny.jpg" class="visible content">
+              <div class="ui grid hidden content">
+                    <div class="column">a</div>
+                    <div class="column">b</div>
+              </div>
+            </div>
+            <div class="content">
+              <a class="header">strMeal</a>
+              <div class="meta">
+                <span class="date">Created in Sep 2014</span>
+              </div>
+            </div>
+            <div class="extra content">
+                <span class="right floated">
+                    strArea en flag tambien
+                </span>
+              <a>
+                <i class="users icon"></i>
+                2 Members
+              </a>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#3D271F" fill-opacity="1" d="M0,96L60,96C120,96,240,96,360,117.3C480,139,600,181,720,197.3C840,213,960,203,1080,176C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>

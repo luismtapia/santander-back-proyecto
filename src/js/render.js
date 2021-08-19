@@ -1,26 +1,31 @@
-// import { getAleatoria, getCategorias } from './search'
-//borrar impor ?
 
+// ESTA FUNCION RENDERIZA(CREA) MODAL CON LA RECETA ALEATORIA
 function renderAleatoria(aleatoria) {
-    const modal = document.querySelector('#modalrandom');
+    // LECTURA DE COMPONENTES EN DONDE SE RENDERIZARAN LOS RESULTADOS DE API
     const strMeal = document.querySelector('#modalrandom .strMeal');
-    strMeal.textContent = aleatoria.meals[0].strMeal;
     const strMealThumb = document.querySelector('#modalrandom .strMealThumb');
-    strMealThumb.src = aleatoria.meals[0].strMealThumb;
     const strCategory = document.querySelector('#modalrandom .strCategory');
+    const strIngredients = document.querySelector('#modalrandom .strIngredients');
+    strIngredients.innerHTML = "";
+    const detalles = document.querySelector('#modalrandom .actions');
+    detalles.innerHTML = "";
+    const strTags = document.querySelector('#modalrandom .strTags');
+    strTags.innerHTML = "";
+
+
+    // ASIGNACION DE COMPONENTES EN DONDE SE RENDERIZARAN LOS RESULTADOS DE API
+    strMeal.textContent = aleatoria.meals[0].strMeal;
+    strMealThumb.src = aleatoria.meals[0].strMealThumb;
     strCategory.textContent = aleatoria.meals[0].strCategory;
 
 
-    const strIngredients = document.querySelector('#modalrandom .strIngredients');
-    // console.log("aleatoria",aleatoria.meals[0]);
-    const meal = aleatoria.meals[0];
-    console.log("meal", meal);
-    strIngredients.innerHTML = "";
 
+    // INGREDIENTES Y MEDIDAS
+    const meal = aleatoria.meals[0];
     for (let i = 1; i <= 20; i++) {
         const Ingredients = meal[`strIngredient${i}`];
         const Measures = meal[`strMeasure${i}`];
-        console.log(Ingredients);
+
         if (Ingredients === null || Ingredients === "") {
             console.log("No hay ingredientes");
         }else{
@@ -50,31 +55,25 @@ function renderAleatoria(aleatoria) {
         }
     }
 
-    const detalles = document.querySelector('#modalrandom .actions');
-    detalles.innerHTML = "";
+    // ACCIONES EN MODAL
     const flag = document.createElement('i');
-    flag.className = "france flag strArea";
-
+    const pais = banderas.get(aleatoria.meals[0].strArea);
+    flag.className = `${pais} flag strArea`;
     const a = document.createElement('a');
     a.className = "ui green ok inverted icon button";
     a.textContent = aleatoria.meals[0].strArea;
-    a.href = `../showDetailRecipeById.html?id=${aleatoria.meals[0].idMeal}`;
+    a.href = `../showDetailRecipeById.html?id=${aleatoria.meals[0].idMeal}`; //arreglar en webpack para integrar cambios de equipo
     const i = document.createElement('i');
     i.className = "external alternate icon";
-
-    //bandera
-
 
     a.appendChild(i);
     detalles.appendChild(flag);
     detalles.appendChild(a);
 
 
-
-    const strTags = document.querySelector('#modalrandom .strTags');
-    strTags.innerHTML = "";
-    const tags = aleatoria.meals[0].strTags.split(',');
-    if (tags != null && tags != "") {
+    // TAGS
+    if (aleatoria.meals[0].strTags) { //diferente de null
+        const tags = aleatoria.meals[0].strTags.split(',');
         tags.forEach(tag => {
             const strTag = document.createElement('a');
             strTag.className = "ui yellow tag label";
@@ -82,33 +81,20 @@ function renderAleatoria(aleatoria) {
             strTags.appendChild(strTag);
         });
     }
-
-    
-    
-    // console.log(aleatoria);
 }
 
+// ESTA FUNCION RENDERIZA LAS CARDS DE CATEGORIAS EN UN SECTION EN INDEX
 function renderCategorias(categorias) {
-    console.log(categorias.categories);
     const cargando = document.querySelector('.main.cargando');
-    if (cargando === null) {
-        
-    }else{
-        cargando.remove();
-    }
-    
+    (cargando === null) ? console.log("Solo me imprimo como hack") : cargando.remove();
 
     //encabezado
     const recetas = document.querySelector('.recetas');
-    
     recetas.style.display = "block";
-    // recetas.style.height = "unset";
 
     const contenedor_recetas = document.querySelector('#recetas');
     contenedor_recetas.innerHTML = "";
-    // const main = document.createElement('section');
     contenedor_recetas.className = "ui container";
-    // contenedor_recetas.appendChild(main);
 
     categorias.categories.forEach(categoria => {
         const card = document.createElement('div');
@@ -129,9 +115,18 @@ function renderCategorias(categorias) {
         header.textContent = categoria.strCategory;
         const descripction = document.createElement('div');
         descripction.className = "descripction";
+
+
+        const details = document.createElement('details');
+        const summary = document.createElement('summary');
+        summary.textContent = "Descripción"
+
         const p = document.createElement('p');
         p.textContent =  categoria.strCategoryDescription;
-        descripction.appendChild(p);
+
+        summary.appendChild(p);
+        details.appendChild(summary);
+        descripction.appendChild(details);
         content.appendChild(header);
         content.appendChild(descripction);
         card.appendChild(content);
@@ -148,4 +143,108 @@ function renderCategorias(categorias) {
     });
 }
 
-export { renderAleatoria, renderCategorias };
+// si busca o inicio
+function renderRecetas(data) {
+    console.log(data.meals);
+    const fragmento = new DocumentFragment();
+    const cargando = document.querySelector('.main.cargando');
+    (cargando === null) ? console.log("Solo me imprimo como hack") : cargando.remove();
+
+    //encabezado
+    const recetas = document.querySelector('.recetas');
+    recetas.style.display = "block";
+
+    const contenedor_recetas = document.querySelector('#recetas');
+    contenedor_recetas.innerHTML = "";
+    contenedor_recetas.className = "ui container";
+
+    
+    // genera las cards para mostrar resultados
+    data.meals.forEach(meal => {
+        console.log(meal);
+
+
+
+        const card = document.createElement('div');
+        card.className = "ui card";
+
+        const image = document.createElement('div');
+        image.className = "ui slide masked reveal image";
+
+        const img_visible = document.createElement('img');
+        img_visible.src = meal.strMealThumb;
+        img_visible.alt = "strMealThumb";
+        img_visible.className = "visible content";
+
+        const img_hidden = document.createElement('img');
+        img_hidden.src = meal.strCategoryThumb;
+        img_hidden.alt = "strMealThumb";
+        img_hidden.className = "hidden content";
+
+        image.appendChild(img_visible);
+        image.appendChild(img_hidden);
+        card.appendChild(image);
+        fragmento.appendChild(card);
+    });
+    
+    contenedor_recetas.appendChild(fragmento);
+
+    
+
+    // categorias.categories.forEach(categoria => {
+    //     const card = document.createElement('div');
+    //     card.className = "ui raised link card";
+
+    //     const image = document.createElement('div');
+    //     image.className = "image";
+    //     const img = document.createElement('img');
+    //     img.src = categoria.strCategoryThumb;
+    //     img.alt = "strCategoryThumb";
+    //     image.appendChild(img);
+    //     card.appendChild(image);
+
+    //     const content = document.createElement('div');
+    //     content.className = "content";
+    //     const header = document.createElement('div');
+    //     header.className = "header";
+    //     header.textContent = categoria.strCategory;
+    //     const descripction = document.createElement('div');
+    //     descripction.className = "descripction";
+
+
+    //     const details = document.createElement('details');
+    //     const summary = document.createElement('summary');
+    //     summary.textContent = "Descripción"
+
+    //     const p = document.createElement('p');
+    //     p.textContent =  categoria.strCategoryDescription;
+
+    //     summary.appendChild(p);
+    //     details.appendChild(summary);
+    //     descripction.appendChild(details);
+    //     content.appendChild(header);
+    //     content.appendChild(descripction);
+    //     card.appendChild(content);
+        
+    //     const extra = document.createElement('div');
+    //     extra.className = "extra content";
+    //     const author = document.createElement('div');
+    //     author.className = "author";
+    //     author.textContent = "detalles";
+    //     extra.appendChild(author);
+    //     card.appendChild(extra);
+
+    //     contenedor_recetas.appendChild(card);
+    // });
+    
+}
+
+// Asignacion de area a paises para poder leer las banderas de semantic-ui
+const areas = ['American','British','Canadian','Chinese','Croatian','Dutch','Egyptian','French','Greek','Indian','Irish','Italian','Jamaican','Japanese','Kenyan','Malaysian','Mexican','Moroccan','Polish','Portuguese','Russian','Spanish','Thai','Tunisian','Turkish','Unknown','Vietnamese'];
+const paises = ['us','gb uk','canada','china','croatia','germany','eg','france','greece','india','ireland','italy','jamaica','japan','kenya','malaysia','mexico','morocco','poland','portugal','russia','es','thailand','tunisia','turkey','mayotte','vn'];
+let banderas= new Map();
+for (const key in areas)
+    banderas.set(areas[key], paises[key]);
+
+
+export { renderAleatoria, renderCategorias, renderRecetas};
